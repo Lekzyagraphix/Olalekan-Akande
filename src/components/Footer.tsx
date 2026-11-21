@@ -24,7 +24,7 @@ export function Footer() {
   ].filter((item) => Boolean(item.href));
 
   return (
-    <footer className="bg-[#111111] dark:bg-[#080808] text-white border-t border-white/10 transition-colors duration-200">
+    <footer className="bg-[#111111] text-white border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 md:px-10 pt-16 pb-10 md:pt-24 md:pb-12">
         {/* Top CTA & Brand Split */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-14 border-b border-white/10">

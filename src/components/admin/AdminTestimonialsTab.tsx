@@ -49,12 +49,12 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
 
   return (
     <div className="space-y-8">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-black/10 dark:border-white/12">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-black/10">
         <div>
-          <h2 className="font-display text-2xl font-extrabold text-[#111111] dark:text-white">
+          <h2 className="font-display text-2xl font-extrabold text-[#111111]">
             Testimonials Management
           </h2>
-          <p className="text-sm text-[#777777] dark:text-[#999999] mt-1">
+          <p className="text-sm text-[#777777] mt-1">
             Add real client testimonials. The testimonials section on the public site automatically
             displays when published entries exist.
           </p>
@@ -74,7 +74,7 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
             });
             setIsNew(true);
           }}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#111111] dark:hover:bg-white dark:hover:text-[#111111] transition-colors cursor-pointer self-start"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#111111] transition-colors cursor-pointer self-start"
         >
           <Plus className="w-4 h-4" />
           <span>Add Testimonial</span>
@@ -82,11 +82,11 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
       </div>
 
       {testimonials.length === 0 ? (
-        <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-10 text-center">
-          <p className="font-display text-lg font-bold text-[#111111] dark:text-white mb-2">
+        <div className="bg-white border border-black/10 p-10 text-center">
+          <p className="font-display text-lg font-bold text-[#111111] mb-2">
             No Testimonials Yet
           </p>
-          <p className="text-sm text-[#555555] dark:text-[#B3B3B3]">
+          <p className="text-sm text-[#555555]">
             Add verified client feedback here when ready. Nothing fabricated is displayed on your
             portfolio.
           </p>
@@ -96,23 +96,23 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-5 flex flex-col md:flex-row md:items-center justify-between gap-4"
+              className="bg-white border border-black/10 p-5 flex flex-col md:flex-row md:items-center justify-between gap-4"
             >
               <div className="flex items-start gap-4">
                 {resolveMediaUrl(t.clientImageUrl) && (
                   <CmsImage
                     src={t.clientImageUrl}
                     alt={t.clientName}
-                    className="w-12 h-12 object-cover border border-black/10 dark:border-white/15 shrink-0"
+                    className="w-12 h-12 object-cover border border-black/10 shrink-0"
                   />
                 )}
                 <div>
-                  <p className="font-display text-base font-bold text-[#111111] dark:text-white">{t.clientName}</p>
-                  <p className="text-xs text-[#777777] dark:text-[#999999]">
+                  <p className="font-display text-base font-bold text-[#111111]">{t.clientName}</p>
+                  <p className="text-xs text-[#777777]">
                     {[t.clientPosition, t.companyName].filter(Boolean).join(' · ')} ·{' '}
                     {t.published ? 'Published' : 'Hidden'}
                   </p>
-                  <p className="text-sm text-[#555555] dark:text-[#B3B3B3] mt-2 line-clamp-2">&ldquo;{t.quote}&rdquo;</p>
+                  <p className="text-sm text-[#555555] mt-2 line-clamp-2">&ldquo;{t.quote}&rdquo;</p>
                 </div>
               </div>
 
@@ -123,7 +123,7 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
                     await saveTestimonial({ ...t, published: !t.published }, false);
                     onNotify(t.published ? 'Testimonial hidden.' : 'Testimonial published.');
                   }}
-                  className="px-3 py-2 border border-black/15 dark:border-white/20 text-xs font-semibold uppercase text-[#111111] dark:text-white inline-flex items-center gap-1.5 cursor-pointer"
+                  className="px-3 py-2 border border-black/15 text-xs font-semibold uppercase text-[#111111] inline-flex items-center gap-1.5 cursor-pointer"
                 >
                   {t.published ? (
                     <>
@@ -132,7 +132,7 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
                     </>
                   ) : (
                     <>
-                      <EyeOff className="w-3.5 h-3.5 text-[#777777] dark:text-[#999999]" />
+                      <EyeOff className="w-3.5 h-3.5 text-[#777777]" />
                       <span>Hidden</span>
                     </>
                   )}
@@ -143,7 +143,7 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
                     setEditing(t);
                     setIsNew(false);
                   }}
-                  className="px-3.5 py-2 bg-[#111111] dark:bg-white text-white dark:text-[#111111] text-xs font-semibold uppercase hover:bg-[#E31B23] dark:hover:bg-[#E31B23] dark:hover:text-white inline-flex items-center gap-1.5 cursor-pointer"
+                  className="px-3.5 py-2 bg-[#111111] text-white text-xs font-semibold uppercase hover:bg-[#E31B23] inline-flex items-center gap-1.5 cursor-pointer"
                 >
                   <Edit3 className="w-3.5 h-3.5" />
                   <span>Edit</span>
@@ -154,7 +154,7 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
                     await deleteTestimonial(t.id);
                     onNotify('Testimonial deleted.');
                   }}
-                  className="p-2 border border-black/15 dark:border-white/20 text-[#777777] dark:text-[#999999] hover:text-[#E31B23] cursor-pointer"
+                  className="p-2 border border-black/15 text-[#777777] hover:text-[#E31B23] cursor-pointer"
                 >
                   <Trash2 className="w-4 h-4" />
                 </button>
@@ -168,16 +168,16 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
         <div className="fixed inset-0 z-50 bg-[#111111]/80 flex items-center justify-center p-4">
           <form
             onSubmit={handleSave}
-            className="bg-white dark:bg-[#171717] border border-black/20 dark:border-white/15 max-w-2xl w-full p-6 md:p-8 space-y-5 text-[#111111] dark:text-white"
+            className="bg-white border border-black/20 max-w-2xl w-full p-6 md:p-8 space-y-5 text-[#111111]"
           >
-            <div className="flex items-center justify-between pb-4 border-b border-black/10 dark:border-white/12">
-              <h3 className="font-display text-xl font-extrabold text-[#111111] dark:text-white">
+            <div className="flex items-center justify-between pb-4 border-b border-black/10">
+              <h3 className="font-display text-xl font-extrabold text-[#111111]">
                 {isNew ? 'Add Testimonial' : 'Edit Testimonial'}
               </h3>
               <button
                 type="button"
                 onClick={() => setEditing(null)}
-                className="p-2 text-[#777777] dark:text-[#999999] hover:text-[#111111] dark:hover:text-white cursor-pointer"
+                className="p-2 text-[#777777] hover:text-[#111111] cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -191,7 +191,7 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
                   required
                   value={editing.clientName}
                   onChange={(e) => setEditing({ ...editing, clientName: e.target.value })}
-                  className="w-full px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                  className="w-full px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
                 />
               </div>
               <div>
@@ -200,7 +200,7 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
                   type="text"
                   value={editing.clientPosition}
                   onChange={(e) => setEditing({ ...editing, clientPosition: e.target.value })}
-                  className="w-full px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                  className="w-full px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
                 />
               </div>
             </div>
@@ -211,7 +211,7 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
                 type="text"
                 value={editing.companyName}
                 onChange={(e) => setEditing({ ...editing, companyName: e.target.value })}
-                className="w-full px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                className="w-full px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
               />
             </div>
 
@@ -222,7 +222,7 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
                 required
                 value={editing.quote}
                 onChange={(e) => setEditing({ ...editing, quote: e.target.value })}
-                className="w-full px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                className="w-full px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
               />
             </div>
 
@@ -231,17 +231,17 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
                 <CmsImage
                   src={editing.clientImageUrl}
                   alt={editing.clientName}
-                  className="w-14 h-14 object-cover border border-black/10 dark:border-white/15"
+                  className="w-14 h-14 object-cover border border-black/10"
                 />
               )}
-              <label className="inline-flex items-center gap-2 px-4 py-2 bg-[#111111] dark:bg-white text-white dark:text-[#111111] text-xs font-semibold uppercase hover:bg-[#E31B23] dark:hover:bg-[#E31B23] dark:hover:text-white cursor-pointer">
+              <label className="inline-flex items-center gap-2 px-4 py-2 bg-[#111111] text-white text-xs font-semibold uppercase hover:bg-[#E31B23] cursor-pointer">
                 <Upload className="w-3.5 h-3.5" />
                 <span>{uploading ? 'Uploading...' : 'Upload Client Photo (Optional)'}</span>
                 <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" />
               </label>
             </div>
 
-            <div className="flex items-center justify-between pt-4 border-t border-black/10 dark:border-white/12">
+            <div className="flex items-center justify-between pt-4 border-t border-black/10">
               <label className="inline-flex items-center gap-2 text-xs font-semibold uppercase cursor-pointer">
                 <input
                   type="checkbox"
@@ -255,14 +255,14 @@ export function AdminTestimonialsTab({ onNotify }: AdminTestimonialsTabProps) {
                 <button
                   type="button"
                   onClick={() => setEditing(null)}
-                  className="px-5 py-2.5 border border-black/15 dark:border-white/20 text-xs font-semibold uppercase cursor-pointer"
+                  className="px-5 py-2.5 border border-black/15 text-xs font-semibold uppercase cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={saving}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#E31B23] text-white text-xs font-semibold uppercase hover:bg-[#111111] dark:hover:bg-white dark:hover:text-[#111111] cursor-pointer"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#E31B23] text-white text-xs font-semibold uppercase hover:bg-[#111111] cursor-pointer"
                 >
                   {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
                   <span>Save</span>

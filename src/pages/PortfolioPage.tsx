@@ -56,10 +56,10 @@ export function PortfolioPage() {
         }
       />
 
-      <section className="bg-white dark:bg-[#0D0D0D] border-b border-black/10 dark:border-white/12 transition-colors duration-200">
+      <section className="bg-white border-b border-black/10">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
           {/* Interactive Dynamic Filter Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-4 pb-8 mb-10 border-b border-black/10 dark:border-white/12">
+          <div className="flex flex-wrap items-center justify-between gap-4 pb-8 mb-10 border-b border-black/10">
             <div
               role="group"
               aria-label="Filter projects by category"
@@ -75,7 +75,7 @@ export function PortfolioPage() {
                     className={`px-4 py-2.5 text-xs font-semibold tracking-[0.14em] uppercase transition-colors cursor-pointer whitespace-nowrap ${
                       isActive
                         ? 'bg-[#E31B23] text-white'
-                        : 'bg-[#F4F4F4] dark:bg-[#171717] text-[#111111] dark:text-[#F5F5F5] hover:bg-[#111111] hover:text-white dark:hover:bg-white dark:hover:text-[#111111]'
+                        : 'bg-[#F4F4F4] text-[#111111] hover:bg-[#111111] hover:text-white'
                     }`}
                   >
                     {option.label}
@@ -84,24 +84,24 @@ export function PortfolioPage() {
               })}
             </div>
 
-            <p className="font-mono-num text-xs text-[#777777] dark:text-[#9A9A9A]">
+            <p className="font-mono-num text-xs text-[#777777]">
               Showing {filteredProjects.length}{' '}
               {filteredProjects.length === 1 ? 'project' : 'projects'}
             </p>
           </div>
 
           {filteredProjects.length === 0 ? (
-            <div className="bg-[#F4F4F4] dark:bg-[#171717] border border-black/10 dark:border-white/12 p-12 text-center">
-              <p className="font-display text-xl font-bold text-[#111111] dark:text-white mb-2">
+            <div className="bg-[#F4F4F4] border border-black/10 p-12 text-center">
+              <p className="font-display text-xl font-bold text-[#111111] mb-2">
                 No projects in this category yet.
               </p>
-              <p className="text-sm text-[#555555] dark:text-[#B3B3B3] mb-6">
+              <p className="text-sm text-[#555555] mb-6">
                 Select another discipline filter or view all available projects.
               </p>
               <button
                 type="button"
                 onClick={() => setActiveFilter('ALL')}
-                className="px-6 py-3 bg-[#111111] dark:bg-white text-white dark:text-[#111111] text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#E31B23] hover:text-white transition-colors cursor-pointer"
+                className="px-6 py-3 bg-[#111111] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#E31B23] transition-colors cursor-pointer"
               >
                 Show All Projects
               </button>
@@ -117,7 +117,7 @@ export function PortfolioPage() {
       </section>
 
       {/* Direct Links Directory: Websites Built & Managed Social Pages */}
-      <section className="bg-[#F4F4F4] dark:bg-[#141414] border-b border-black/10 dark:border-white/12 transition-colors duration-200">
+      <section className="bg-[#F4F4F4] border-b border-black/10">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Websites Launched */}
@@ -126,21 +126,21 @@ export function PortfolioPage() {
                 <Globe className="w-4 h-4" />
                 <span>Live Client Websites</span>
               </div>
-              <h2 className="font-display text-2xl md:text-3xl font-extrabold tracking-tight text-[#111111] dark:text-white mb-8">
+              <h2 className="font-display text-2xl md:text-3xl font-extrabold tracking-tight text-[#111111] mb-8">
                 Websites Designed &amp; Delivered
               </h2>
 
-              <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 divide-y divide-black/10 dark:divide-white/12">
+              <div className="bg-white border border-black/10 divide-y divide-black/10">
                 {liveWebsites.map((site, idx) => (
                   <a
                     key={site.id}
                     href={site.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center justify-between gap-4 p-4 sm:p-5 hover:bg-[#111111] dark:hover:bg-[#E31B23] hover:text-white transition-colors"
+                    className="group flex items-center justify-between gap-4 p-4 sm:p-5 hover:bg-[#111111] hover:text-white transition-colors"
                   >
                     <div className="flex items-center gap-4 min-w-0">
-                      <div className="w-24 sm:w-28 aspect-[16/10] shrink-0 overflow-hidden bg-[#111111] border border-black/10 dark:border-white/15 group-hover:border-white/15">
+                      <div className="w-24 sm:w-28 aspect-[16/10] shrink-0 overflow-hidden bg-[#111111] border border-black/10 group-hover:border-white/15">
                         <CmsImage
                           src={site.coverImageUrl}
                           alt={`${site.title} website preview`}
@@ -161,12 +161,12 @@ export function PortfolioPage() {
                             {site.title}
                           </p>
                         </div>
-                        <p className="mt-1 text-xs text-[#777777] dark:text-[#9A9A9A] group-hover:text-white/75 truncate">
+                        <p className="mt-1 text-xs text-[#777777] group-hover:text-white/75 truncate">
                           {site.categoryLabel} · {cleanHost(site.liveUrl)}
                         </p>
                       </div>
                     </div>
-                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] dark:text-white group-hover:text-white whitespace-nowrap shrink-0">
+                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] group-hover:text-white whitespace-nowrap shrink-0">
                       <span className="hidden sm:inline">Visit Site</span>
                       <ArrowUpRight className="w-4 h-4" />
                     </span>
@@ -181,29 +181,29 @@ export function PortfolioPage() {
                 <Instagram className="w-4 h-4" />
                 <span>Social Channels</span>
               </div>
-              <h2 className="font-display text-2xl md:text-3xl font-extrabold tracking-tight text-[#111111] dark:text-white mb-8">
+              <h2 className="font-display text-2xl md:text-3xl font-extrabold tracking-tight text-[#111111] mb-8">
                 Social Media Pages Managed
               </h2>
 
-              <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 divide-y divide-black/10 dark:divide-white/12">
+              <div className="bg-white border border-black/10 divide-y divide-black/10">
                 {MANAGED_SOCIAL_PAGES.map((channel) => (
                   <a
                     key={channel.id}
                     href={channel.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-start justify-between gap-4 p-5 hover:bg-[#111111] dark:hover:bg-[#E31B23] hover:text-white transition-colors"
+                    className="group flex items-start justify-between gap-4 p-5 hover:bg-[#111111] hover:text-white transition-colors"
                   >
                     <div className="min-w-0">
                       <p className="font-mono-num text-xs font-semibold text-[#E31B23] group-hover:text-white">
                         {channel.platform} · {channel.handle}
                       </p>
                       <p className="font-display text-base font-bold mt-1">{channel.name}</p>
-                      <p className="mt-1 text-xs text-[#777777] dark:text-[#9A9A9A] group-hover:text-white/75 leading-relaxed">
+                      <p className="mt-1 text-xs text-[#777777] group-hover:text-white/75 leading-relaxed">
                         {channel.focus}
                       </p>
                     </div>
-                    <ArrowUpRight className="w-4 h-4 text-[#111111] dark:text-white group-hover:text-white shrink-0 mt-1" />
+                    <ArrowUpRight className="w-4 h-4 text-[#111111] group-hover:text-white shrink-0 mt-1" />
                   </a>
                 ))}
               </div>
@@ -212,7 +212,7 @@ export function PortfolioPage() {
         </div>
       </section>
 
-      <section className="bg-[#111111] dark:bg-[#080808] text-white">
+      <section className="bg-[#111111] text-white">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-14 md:py-20 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
           <div>
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#E31B23] mb-2">

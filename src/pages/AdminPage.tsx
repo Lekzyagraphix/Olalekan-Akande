@@ -8,14 +8,11 @@ import {
   LogOut,
   Mail,
   MessageSquareQuote,
-  Moon,
   Settings,
   ShieldCheck,
-  Sun,
   User,
 } from 'lucide-react';
 import { useCms } from '../context/CmsContext';
-import { useTheme } from '../context/ThemeContext';
 import { AdminSettingsTab } from '../components/admin/AdminSettingsTab';
 import { AdminProfileTab } from '../components/admin/AdminProfileTab';
 import { AdminPortfolioTab } from '../components/admin/AdminPortfolioTab';
@@ -35,7 +32,6 @@ type AdminTab =
 
 export function AdminPage() {
   const { authReady, user, isAdmin, authError, signInAdmin, signOutAdmin, enquiries } = useCms();
-  const { isDark, toggleTheme } = useTheme();
   const [activeTab, setActiveTab] = useState<AdminTab>('portfolio');
   const [notice, setNotice] = useState<string | null>(null);
 
@@ -128,9 +124,9 @@ export function AdminPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F4F4F4] dark:bg-[#0D0D0D] text-[#111111] dark:text-[#F5F5F5] flex flex-col transition-colors duration-200">
+    <div className="min-h-screen bg-[#F4F4F4] text-[#111111] flex flex-col">
       {/* Top Admin Bar */}
-      <header className="bg-[#111111] dark:bg-[#080808] text-white border-b border-white/10 sticky top-0 z-30">
+      <header className="bg-[#111111] text-white border-b border-white/10 sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <span className="w-7 h-7 bg-[#E31B23] font-display text-xs font-extrabold flex items-center justify-center">
@@ -141,17 +137,7 @@ export function AdminPage() {
             </span>
           </div>
 
-          <div className="flex items-center gap-3 sm:gap-4">
-            <button
-              type="button"
-              onClick={toggleTheme}
-              aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-              aria-pressed={isDark}
-              title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-              className="w-9 h-9 inline-flex items-center justify-center border border-white/20 text-white hover:border-[#E31B23] hover:text-[#E31B23] transition-colors cursor-pointer"
-            >
-              {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </button>
+          <div className="flex items-center gap-4">
             <Link
               to="/"
               className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-white/80 hover:text-[#E31B23] transition-colors"
@@ -189,8 +175,8 @@ export function AdminPage() {
       <div className="max-w-7xl mx-auto w-full px-6 py-8 md:py-10 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-1">
         {/* Sidebar Navigation */}
         <aside className="lg:col-span-3">
-          <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-4 space-y-1 sticky top-24">
-            <p className="px-3 py-2 text-[11px] font-semibold tracking-[0.16em] uppercase text-[#777777] dark:text-[#999999] truncate">
+          <div className="bg-white border border-black/10 p-4 space-y-1 sticky top-24">
+            <p className="px-3 py-2 text-[11px] font-semibold tracking-[0.16em] uppercase text-[#777777] truncate">
               Signed in: {user.email}
             </p>
             {tabs.map((tab) => {
@@ -202,12 +188,12 @@ export function AdminPage() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`w-full px-3.5 py-3 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.12em] transition-colors cursor-pointer ${
                     active
-                      ? 'bg-[#111111] dark:bg-[#E31B23] text-white'
-                      : 'text-[#111111] dark:text-[#E5E5E5] hover:bg-[#F4F4F4] dark:hover:bg-white/5'
+                      ? 'bg-[#111111] text-white'
+                      : 'text-[#111111] hover:bg-[#F4F4F4]'
                   }`}
                 >
                   <span className="flex items-center gap-2.5">
-                    <span className={active ? 'text-[#E31B23] dark:text-white' : 'text-[#777777] dark:text-[#999999]'}>
+                    <span className={active ? 'text-[#E31B23]' : 'text-[#777777]'}>
                       {tab.icon}
                     </span>
                     <span>{tab.label}</span>

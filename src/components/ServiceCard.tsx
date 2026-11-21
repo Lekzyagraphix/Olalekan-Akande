@@ -14,10 +14,10 @@ export function ServiceCard({ service }: ServiceCardProps) {
   const imgResolved = resolveMediaUrl(service.imageUrl);
 
   return (
-    <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-7 md:p-9 flex flex-col justify-between hover:border-[#111111] dark:hover:border-[#E31B23] transition-colors">
+    <div className="bg-white border border-black/10 p-7 md:p-9 flex flex-col justify-between hover:border-[#111111] transition-colors">
       <div>
         {imgResolved && (
-          <div className="aspect-[16/9] mb-6 bg-[#F4F4F4] dark:bg-[#1F1F1F] overflow-hidden border border-black/10 dark:border-white/12">
+          <div className="aspect-[16/9] mb-6 bg-[#F4F4F4] overflow-hidden border border-black/10">
             <CmsImage
               src={service.imageUrl}
               alt={service.title}
@@ -29,23 +29,23 @@ export function ServiceCard({ service }: ServiceCardProps) {
           <span className="font-mono-num text-sm font-bold text-[#E31B23]">
             {service.number}.
           </span>
-          <span className="text-[11px] font-semibold tracking-[0.16em] uppercase text-[#777777] dark:text-[#9A9A9A]">
+          <span className="text-[11px] font-semibold tracking-[0.16em] uppercase text-[#777777]">
             {service.category}
           </span>
         </div>
 
-        <h3 className="font-display text-xl md:text-2xl font-bold tracking-tight text-[#111111] dark:text-white mb-3">
+        <h3 className="font-display text-xl md:text-2xl font-bold tracking-tight text-[#111111] mb-3">
           {service.title}
         </h3>
-        <p className="text-sm md:text-base text-[#555555] dark:text-[#B3B3B3] leading-relaxed mb-6">
+        <p className="text-sm md:text-base text-[#555555] leading-relaxed mb-6">
           {service.shortDescription}
         </p>
 
-        <div className="border-t border-black/10 dark:border-white/12 pt-5">
-          <p className="text-[11px] font-semibold tracking-[0.16em] uppercase text-[#777777] dark:text-[#9A9A9A] mb-3">
+        <div className="border-t border-black/10 pt-5">
+          <p className="text-[11px] font-semibold tracking-[0.16em] uppercase text-[#777777] mb-3">
             Services Include
           </p>
-          <ul className="space-y-2 text-sm text-[#111111] dark:text-[#EAEAEA]">
+          <ul className="space-y-2 text-sm text-[#111111]">
             {service.deliverables.slice(0, 6).map((item) => (
               <li key={item} className="flex items-start gap-2.5">
                 <span className="w-1.5 h-1.5 bg-[#E31B23] mt-2 shrink-0" />
@@ -56,10 +56,10 @@ export function ServiceCard({ service }: ServiceCardProps) {
         </div>
       </div>
 
-      <div className="mt-8 pt-5 border-t border-black/10 dark:border-white/12">
+      <div className="mt-8 pt-5 border-t border-black/10">
         <Link
           to="/services"
-          className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] dark:text-white hover:text-[#E31B23] transition-colors"
+          className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] hover:text-[#E31B23] transition-colors"
         >
           <span>Explore Service Details</span>
           <ArrowUpRight className="w-3.5 h-3.5" />

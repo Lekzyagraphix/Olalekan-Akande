@@ -69,12 +69,12 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
 
   return (
     <div className="space-y-8">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-black/10 dark:border-white/12">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-black/10">
         <div>
-          <h2 className="font-display text-2xl font-extrabold text-[#111111] dark:text-white">
+          <h2 className="font-display text-2xl font-extrabold text-[#111111]">
             Services Management
           </h2>
-          <p className="text-sm text-[#777777] dark:text-[#999999] mt-1">
+          <p className="text-sm text-[#777777] mt-1">
             Edit service categories, deliverables, images, order, and visibility.
           </p>
         </div>
@@ -96,7 +96,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
               sortOrder: services.length + 1,
             })
           }
-          className="inline-flex items-center gap-2 px-6 py-3 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#111111] dark:hover:bg-white dark:hover:text-[#111111] transition-colors cursor-pointer self-start"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#111111] transition-colors cursor-pointer self-start"
         >
           <Plus className="w-4 h-4" />
           <span>Add Service</span>
@@ -107,18 +107,18 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
         {services.map((svc, idx) => (
           <div
             key={svc.id}
-            className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-5 flex flex-col md:flex-row md:items-center justify-between gap-4"
+            className="bg-white border border-black/10 p-5 flex flex-col md:flex-row md:items-center justify-between gap-4"
           >
             <div>
-              <div className="flex items-center gap-2 text-xs text-[#777777] dark:text-[#999999]">
+              <div className="flex items-center gap-2 text-xs text-[#777777]">
                 <span className="font-mono-num font-bold text-[#E31B23]">{svc.number}</span>
                 <span>·</span>
                 <span>{svc.category}</span>
                 <span>·</span>
                 <span>{svc.published ? 'Published' : 'Hidden'}</span>
               </div>
-              <h3 className="font-display text-lg font-bold text-[#111111] dark:text-white">{svc.title}</h3>
-              <p className="text-xs text-[#555555] dark:text-[#B3B3B3] mt-1 max-w-2xl">{svc.shortDescription}</p>
+              <h3 className="font-display text-lg font-bold text-[#111111]">{svc.title}</h3>
+              <p className="text-xs text-[#555555] mt-1 max-w-2xl">{svc.shortDescription}</p>
             </div>
 
             <div className="flex items-center gap-2 shrink-0">
@@ -126,7 +126,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                 type="button"
                 onClick={() => handleMove(idx, -1)}
                 disabled={idx === 0}
-                className="p-2 border border-black/15 dark:border-white/20 text-[#111111] dark:text-white disabled:opacity-30 cursor-pointer"
+                className="p-2 border border-black/15 text-[#111111] disabled:opacity-30 cursor-pointer"
               >
                 <ArrowUp className="w-4 h-4" />
               </button>
@@ -134,7 +134,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                 type="button"
                 onClick={() => handleMove(idx, 1)}
                 disabled={idx === services.length - 1}
-                className="p-2 border border-black/15 dark:border-white/20 text-[#111111] dark:text-white disabled:opacity-30 cursor-pointer"
+                className="p-2 border border-black/15 text-[#111111] disabled:opacity-30 cursor-pointer"
               >
                 <ArrowDown className="w-4 h-4" />
               </button>
@@ -144,7 +144,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                   await saveService({ ...svc, published: !svc.published });
                   onNotify(svc.published ? 'Service hidden.' : 'Service published.');
                 }}
-                className="px-3 py-2 border border-black/15 dark:border-white/20 text-xs font-semibold uppercase text-[#111111] dark:text-white inline-flex items-center gap-1.5 cursor-pointer"
+                className="px-3 py-2 border border-black/15 text-xs font-semibold uppercase text-[#111111] inline-flex items-center gap-1.5 cursor-pointer"
               >
                 {svc.published ? (
                   <>
@@ -153,7 +153,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                   </>
                 ) : (
                   <>
-                    <EyeOff className="w-3.5 h-3.5 text-[#777777] dark:text-[#999999]" />
+                    <EyeOff className="w-3.5 h-3.5 text-[#777777]" />
                     <span>Hidden</span>
                   </>
                 )}
@@ -161,7 +161,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
               <button
                 type="button"
                 onClick={() => setEditing(svc)}
-                className="px-3.5 py-2 bg-[#111111] dark:bg-white text-white dark:text-[#111111] text-xs font-semibold uppercase hover:bg-[#E31B23] dark:hover:bg-[#E31B23] dark:hover:text-white inline-flex items-center gap-1.5 cursor-pointer"
+                className="px-3.5 py-2 bg-[#111111] text-white text-xs font-semibold uppercase hover:bg-[#E31B23] inline-flex items-center gap-1.5 cursor-pointer"
               >
                 <Edit3 className="w-3.5 h-3.5" />
                 <span>Edit</span>
@@ -172,7 +172,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                   await deleteService(svc.id);
                   onNotify(`Deleted "${svc.title}".`);
                 }}
-                className="p-2 border border-black/15 dark:border-white/20 text-[#777777] dark:text-[#999999] hover:text-[#E31B23] cursor-pointer"
+                className="p-2 border border-black/15 text-[#777777] hover:text-[#E31B23] cursor-pointer"
               >
                 <Trash2 className="w-4 h-4" />
               </button>
@@ -185,16 +185,16 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
         <div className="fixed inset-0 z-50 bg-[#111111]/80 flex items-start justify-center p-4 md:p-8 overflow-y-auto">
           <form
             onSubmit={handleSave}
-            className="bg-white dark:bg-[#171717] border border-black/20 dark:border-white/15 max-w-3xl w-full p-6 md:p-8 space-y-5 my-6 text-[#111111] dark:text-white"
+            className="bg-white border border-black/20 max-w-3xl w-full p-6 md:p-8 space-y-5 my-6 text-[#111111]"
           >
-            <div className="flex items-center justify-between pb-4 border-b border-black/10 dark:border-white/12">
-              <h3 className="font-display text-xl font-extrabold text-[#111111] dark:text-white">
+            <div className="flex items-center justify-between pb-4 border-b border-black/10">
+              <h3 className="font-display text-xl font-extrabold text-[#111111]">
                 Edit Service
               </h3>
               <button
                 type="button"
                 onClick={() => setEditing(null)}
-                className="p-2 text-[#777777] dark:text-[#999999] hover:text-[#111111] dark:hover:text-white cursor-pointer"
+                className="p-2 text-[#777777] hover:text-[#111111] cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -208,7 +208,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                   required
                   value={editing.number}
                   onChange={(e) => setEditing({ ...editing, number: e.target.value })}
-                  className="w-full px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                  className="w-full px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
                 />
               </div>
               <div className="sm:col-span-2">
@@ -218,7 +218,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                   required
                   value={editing.title}
                   onChange={(e) => setEditing({ ...editing, title: e.target.value })}
-                  className="w-full px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                  className="w-full px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
                 />
               </div>
             </div>
@@ -230,7 +230,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                   type="text"
                   value={editing.category}
                   onChange={(e) => setEditing({ ...editing, category: e.target.value })}
-                  className="w-full px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                  className="w-full px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
                 />
               </div>
               <div>
@@ -239,7 +239,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                   type="text"
                   value={editing.idealFor}
                   onChange={(e) => setEditing({ ...editing, idealFor: e.target.value })}
-                  className="w-full px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                  className="w-full px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
                 />
               </div>
             </div>
@@ -250,7 +250,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                 type="text"
                 value={editing.headline}
                 onChange={(e) => setEditing({ ...editing, headline: e.target.value })}
-                className="w-full px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                className="w-full px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
               />
             </div>
 
@@ -263,7 +263,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                 required
                 value={editing.shortDescription}
                 onChange={(e) => setEditing({ ...editing, shortDescription: e.target.value })}
-                className="w-full px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                className="w-full px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
               />
             </div>
 
@@ -275,7 +275,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                 rows={4}
                 value={editing.description}
                 onChange={(e) => setEditing({ ...editing, description: e.target.value })}
-                className="w-full px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                className="w-full px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
               />
             </div>
 
@@ -295,7 +295,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                       .filter(Boolean),
                   })
                 }
-                className="w-full px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                className="w-full px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
               />
             </div>
 
@@ -304,10 +304,10 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                 <CmsImage
                   src={editing.imageUrl}
                   alt={editing.title}
-                  className="w-24 h-16 object-cover border border-black/10 dark:border-white/15"
+                  className="w-24 h-16 object-cover border border-black/10"
                 />
               )}
-              <label className="inline-flex items-center gap-2 px-4 py-2 bg-[#111111] dark:bg-white text-white dark:text-[#111111] text-xs font-semibold uppercase hover:bg-[#E31B23] dark:hover:bg-[#E31B23] dark:hover:text-white cursor-pointer">
+              <label className="inline-flex items-center gap-2 px-4 py-2 bg-[#111111] text-white text-xs font-semibold uppercase hover:bg-[#E31B23] cursor-pointer">
                 <Upload className="w-3.5 h-3.5" />
                 <span>{uploading ? 'Uploading...' : 'Upload Service Image'}</span>
                 <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" />
@@ -323,7 +323,7 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
               )}
             </div>
 
-            <div className="flex items-center justify-between pt-4 border-t border-black/10 dark:border-white/12">
+            <div className="flex items-center justify-between pt-4 border-t border-black/10">
               <label className="inline-flex items-center gap-2 text-xs font-semibold uppercase cursor-pointer">
                 <input
                   type="checkbox"
@@ -337,14 +337,14 @@ export function AdminServicesTab({ onNotify }: AdminServicesTabProps) {
                 <button
                   type="button"
                   onClick={() => setEditing(null)}
-                  className="px-5 py-2.5 border border-black/15 dark:border-white/20 text-xs font-semibold uppercase cursor-pointer"
+                  className="px-5 py-2.5 border border-black/15 text-xs font-semibold uppercase cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={saving}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#E31B23] text-white text-xs font-semibold uppercase hover:bg-[#111111] dark:hover:bg-white dark:hover:text-[#111111] cursor-pointer"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#E31B23] text-white text-xs font-semibold uppercase hover:bg-[#111111] cursor-pointer"
                 >
                   {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
                   <span>Save Service</span>

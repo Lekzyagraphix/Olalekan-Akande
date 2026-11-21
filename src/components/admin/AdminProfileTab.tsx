@@ -64,23 +64,20 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-8 [&_input]:bg-[#F4F4F4] dark:[&_input]:bg-[#0D0D0D] [&_input]:border-black/10 dark:[&_input]:border-white/15 [&_input]:text-[#111111] dark:[&_input]:text-white [&_textarea]:bg-[#F4F4F4] dark:[&_textarea]:bg-[#0D0D0D] [&_textarea]:border-black/10 dark:[&_textarea]:border-white/15 [&_textarea]:text-[#111111] dark:[&_textarea]:text-white"
-    >
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-black/10 dark:border-white/12">
+    <form onSubmit={handleSubmit} className="space-y-8">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-black/10">
         <div>
-          <h2 className="font-display text-2xl font-extrabold text-[#111111] dark:text-white">
+          <h2 className="font-display text-2xl font-extrabold text-[#111111]">
             Profile Management
           </h2>
-          <p className="text-sm text-[#777777] dark:text-[#999999] mt-1">
+          <p className="text-sm text-[#777777] mt-1">
             Upload your portrait and CV, and manage your biography, experience, skills, and education.
           </p>
         </div>
         <button
           type="submit"
           disabled={saving}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#111111] dark:hover:bg-white dark:hover:text-[#111111] disabled:opacity-60 transition-colors cursor-pointer self-start"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#111111] disabled:opacity-60 transition-colors cursor-pointer self-start"
         >
           {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
           <span>{saving ? 'Saving...' : 'Save Profile'}</span>
@@ -89,10 +86,10 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
 
       {/* Portrait & CV Upload */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-6 space-y-4">
-          <h3 className="font-display text-lg font-bold text-[#111111] dark:text-white">Portrait Photograph</h3>
+        <div className="bg-white border border-black/10 p-6 space-y-4">
+          <h3 className="font-display text-lg font-bold text-[#111111]">Portrait Photograph</h3>
           <div className="flex items-center gap-5">
-            <div className="w-24 h-28 bg-[#111111] border border-black/10 dark:border-white/15 overflow-hidden shrink-0 flex items-center justify-center text-white text-xs">
+            <div className="w-24 h-28 bg-[#111111] border border-black/10 overflow-hidden shrink-0 flex items-center justify-center text-white text-xs">
               {resolveMediaUrl(form.portraitUrl) ? (
                 <CmsImage
                   src={form.portraitUrl}
@@ -104,7 +101,7 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
               )}
             </div>
             <div className="space-y-3">
-              <label className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#111111] dark:bg-white text-white dark:text-[#111111] text-xs font-semibold uppercase tracking-[0.12em] hover:bg-[#E31B23] dark:hover:bg-[#E31B23] dark:hover:text-white transition-colors cursor-pointer">
+              <label className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#111111] text-white text-xs font-semibold uppercase tracking-[0.12em] hover:bg-[#E31B23] transition-colors cursor-pointer">
                 <Upload className="w-3.5 h-3.5" />
                 <span>{uploadingPortrait ? 'Uploading...' : 'Upload Portrait'}</span>
                 <input
@@ -127,18 +124,18 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-6 space-y-4">
-          <h3 className="font-display text-lg font-bold text-[#111111] dark:text-white">Curriculum Vitae (PDF)</h3>
+        <div className="bg-white border border-black/10 p-6 space-y-4">
+          <h3 className="font-display text-lg font-bold text-[#111111]">Curriculum Vitae (PDF)</h3>
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 flex items-center justify-center shrink-0">
+            <div className="w-12 h-12 bg-[#F4F4F4] border border-black/10 flex items-center justify-center shrink-0">
               <FileText className="w-5 h-5 text-[#E31B23]" />
             </div>
             <div className="space-y-2 min-w-0">
-              <p className="text-sm font-medium text-[#111111] dark:text-white truncate">
+              <p className="text-sm font-medium text-[#111111] truncate">
                 {form.cvFileName || 'No CV uploaded yet'}
               </p>
               <div className="flex items-center gap-4">
-                <label className="inline-flex items-center gap-2 px-4 py-2 bg-[#111111] dark:bg-white text-white dark:text-[#111111] text-xs font-semibold uppercase tracking-[0.12em] hover:bg-[#E31B23] dark:hover:bg-[#E31B23] dark:hover:text-white transition-colors cursor-pointer">
+                <label className="inline-flex items-center gap-2 px-4 py-2 bg-[#111111] text-white text-xs font-semibold uppercase tracking-[0.12em] hover:bg-[#E31B23] transition-colors cursor-pointer">
                   <Upload className="w-3.5 h-3.5" />
                   <span>{uploadingCv ? 'Uploading...' : 'Upload CV (PDF)'}</span>
                   <input
@@ -164,8 +161,8 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
       </div>
 
       {/* Core Bio */}
-      <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-6 md:p-8 space-y-5">
-        <h3 className="font-display text-lg font-bold text-[#111111] dark:text-white">Personal Details &amp; Bio</h3>
+      <div className="bg-white border border-black/10 p-6 md:p-8 space-y-5">
+        <h3 className="font-display text-lg font-bold text-[#111111]">Personal Details &amp; Bio</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
             <label className="block text-xs font-semibold uppercase tracking-[0.12em] mb-2">
@@ -251,9 +248,9 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
       </div>
 
       {/* Experience */}
-      <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-6 md:p-8 space-y-5">
+      <div className="bg-white border border-black/10 p-6 md:p-8 space-y-5">
         <div className="flex items-center justify-between">
-          <h3 className="font-display text-lg font-bold text-[#111111] dark:text-white">
+          <h3 className="font-display text-lg font-bold text-[#111111]">
             Professional Experience
           </h3>
           <button
@@ -282,7 +279,7 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
 
         <div className="space-y-6">
           {form.experiences.map((exp, idx) => (
-            <div key={exp.id || idx} className="p-5 bg-[#F4F4F4] dark:bg-[#141414] border border-black/10 dark:border-white/12 space-y-4">
+            <div key={exp.id || idx} className="p-5 bg-[#F4F4F4] border border-black/10 space-y-4">
               <div className="flex items-center justify-between gap-3">
                 <span className="font-mono-num text-xs font-bold text-[#E31B23]">
                   Role 0{idx + 1}
@@ -295,7 +292,7 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
                       experiences: form.experiences.filter((_, i) => i !== idx),
                     })
                   }
-                  className="text-xs text-[#777777] dark:text-[#999999] hover:text-[#E31B23] inline-flex items-center gap-1 cursor-pointer"
+                  className="text-xs text-[#777777] hover:text-[#E31B23] inline-flex items-center gap-1 cursor-pointer"
                 >
                   <Trash2 className="w-3.5 h-3.5" />
                   <span>Remove</span>
@@ -311,7 +308,7 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
                     setForm({ ...form, experiences: next });
                   }}
                   placeholder="Role Title"
-                  className="px-3 py-2 bg-white dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                  className="px-3 py-2 bg-white border border-black/10 text-sm"
                 />
                 <input
                   type="text"
@@ -322,7 +319,7 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
                     setForm({ ...form, experiences: next });
                   }}
                   placeholder="Period"
-                  className="px-3 py-2 bg-white dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                  className="px-3 py-2 bg-white border border-black/10 text-sm"
                 />
                 <input
                   type="text"
@@ -333,11 +330,11 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
                     setForm({ ...form, experiences: next });
                   }}
                   placeholder="Company / Practice"
-                  className="px-3 py-2 bg-white dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                  className="px-3 py-2 bg-white border border-black/10 text-sm"
                 />
               </div>
               <div>
-                <label className="block text-[11px] font-semibold uppercase tracking-[0.12em] text-[#777777] dark:text-[#999999] mb-1">
+                <label className="block text-[11px] font-semibold uppercase tracking-[0.12em] text-[#777777] mb-1">
                   Responsibilities (one per line)
                 </label>
                 <textarea
@@ -354,7 +351,7 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
                     };
                     setForm({ ...form, experiences: next });
                   }}
-                  className="w-full px-3 py-2 bg-white dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                  className="w-full px-3 py-2 bg-white border border-black/10 text-sm"
                 />
               </div>
             </div>
@@ -363,9 +360,9 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
       </div>
 
       {/* Education & Core Competencies */}
-      <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-6 md:p-8 space-y-5">
+      <div className="bg-white border border-black/10 p-6 md:p-8 space-y-5">
         <div className="flex items-center justify-between">
-          <h3 className="font-display text-lg font-bold text-[#111111] dark:text-white">
+          <h3 className="font-display text-lg font-bold text-[#111111]">
             Education &amp; Qualifications
           </h3>
           <button
@@ -398,7 +395,7 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
                   setForm({ ...form, education: next });
                 }}
                 placeholder="Degree / Certificate"
-                className="md:col-span-5 px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                className="md:col-span-5 px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
               />
               <input
                 type="text"
@@ -409,7 +406,7 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
                   setForm({ ...form, education: next });
                 }}
                 placeholder="Institution"
-                className="md:col-span-4 px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                className="md:col-span-4 px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
               />
               <input
                 type="text"
@@ -420,7 +417,7 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
                   setForm({ ...form, education: next });
                 }}
                 placeholder="Date"
-                className="md:col-span-2 px-3 py-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+                className="md:col-span-2 px-3 py-2 bg-[#F4F4F4] border border-black/10 text-sm"
               />
               <button
                 type="button"
@@ -428,7 +425,7 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
                   setForm({ ...form, education: form.education.filter((_, i) => i !== idx) })
                 }
                 aria-label="Delete qualification"
-                className="md:col-span-1 p-2 text-[#777777] dark:text-[#999999] hover:text-[#E31B23] cursor-pointer"
+                className="md:col-span-1 p-2 text-[#777777] hover:text-[#E31B23] cursor-pointer"
               >
                 <Trash2 className="w-4 h-4" />
               </button>
@@ -436,7 +433,7 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
           ))}
         </div>
 
-        <div className="pt-4 border-t border-black/10 dark:border-white/12">
+        <div className="pt-4 border-t border-black/10">
           <label className="block text-xs font-semibold uppercase tracking-[0.12em] mb-2">
             Core Competencies (one per line)
           </label>
@@ -452,7 +449,7 @@ export function AdminProfileTab({ onNotify }: AdminProfileTabProps) {
                   .filter(Boolean),
               })
             }
-            className="w-full px-3.5 py-2.5 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white"
+            className="w-full px-3.5 py-2.5 bg-[#F4F4F4] border border-black/10 text-sm"
           />
         </div>
       </div>

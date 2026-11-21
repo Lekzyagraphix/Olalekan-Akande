@@ -22,7 +22,7 @@ export function AboutPage() {
       />
 
       {/* Intro + Portrait Split */}
-      <section className="bg-white dark:bg-[#0D0D0D] border-b border-black/10 dark:border-white/12 transition-colors duration-200">
+      <section className="bg-white border-b border-black/10">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5">
@@ -31,7 +31,7 @@ export function AboutPage() {
                 <a
                   href={cvResolved}
                   download={profile.cvFileName || 'Akande-Olalekan-CV.pdf'}
-                  className="mt-4 w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-[#111111] dark:border-white/30 text-xs font-semibold tracking-[0.16em] uppercase text-[#111111] dark:text-white hover:bg-[#111111] hover:text-white dark:hover:bg-white dark:hover:text-[#111111] transition-colors"
+                  className="mt-4 w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-[#111111] text-xs font-semibold tracking-[0.16em] uppercase text-[#111111] hover:bg-[#111111] hover:text-white transition-colors"
                 >
                   <Download className="w-4 h-4" />
                   <span>Download CV</span>
@@ -39,23 +39,23 @@ export function AboutPage() {
               )}
             </div>
 
-            <div className="lg:col-span-7 space-y-6 text-base md:text-lg text-[#555555] dark:text-[#B3B3B3] leading-relaxed">
+            <div className="lg:col-span-7 space-y-6 text-base md:text-lg text-[#555555] leading-relaxed">
               <Reveal>
                 <div className="space-y-5">
                   {profile.aboutIntro.split('\n\n').map((para, i) => (
-                    <p key={i} className={i === 0 ? 'text-[#111111] dark:text-white font-medium text-lg md:text-xl' : ''}>
+                    <p key={i} className={i === 0 ? 'text-[#111111] font-medium text-lg md:text-xl' : ''}>
                       {para}
                     </p>
                   ))}
                 </div>
               </Reveal>
 
-              <div className="pt-8 border-t border-black/10 dark:border-white/12 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="pt-8 border-t border-black/10 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <p className="text-[11px] font-semibold tracking-[0.16em] uppercase text-[#E31B23] mb-1">
                     Creative Identity
                   </p>
-                  <p className="font-display text-base font-bold text-[#111111] dark:text-white">
+                  <p className="font-display text-base font-bold text-[#111111]">
                     {profile.creativeIdentity}
                   </p>
                 </div>
@@ -63,7 +63,7 @@ export function AboutPage() {
                   <p className="text-[11px] font-semibold tracking-[0.16em] uppercase text-[#E31B23] mb-1">
                     Location
                   </p>
-                  <p className="font-display text-base font-bold text-[#111111] dark:text-white">
+                  <p className="font-display text-base font-bold text-[#111111]">
                     {profile.location}
                   </p>
                 </div>
@@ -74,7 +74,7 @@ export function AboutPage() {
       </section>
 
       {/* My Story */}
-      <section className="bg-[#F4F4F4] dark:bg-[#141414] border-b border-black/10 dark:border-white/12 transition-colors duration-200">
+      <section className="bg-[#F4F4F4] border-b border-black/10">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             <div className="lg:col-span-5">
@@ -82,12 +82,12 @@ export function AboutPage() {
                 <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#E31B23] mb-3">
                   My Story
                 </p>
-                <h2 className="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-[#111111] dark:text-white">
+                <h2 className="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-[#111111]">
                   {profile.storyHeadline}
                 </h2>
               </Reveal>
             </div>
-            <div className="lg:col-span-7 space-y-5 text-base text-[#555555] dark:text-[#B3B3B3] leading-relaxed">
+            <div className="lg:col-span-7 space-y-5 text-base text-[#555555] leading-relaxed">
               {profile.storyContent.split('\n\n').map((para, idx) => (
                 <p key={idx}>{para}</p>
               ))}
@@ -97,7 +97,7 @@ export function AboutPage() {
       </section>
 
       {/* My Design Philosophy */}
-      <section className="bg-[#111111] dark:bg-[#080808] text-white border-b border-white/10">
+      <section className="bg-[#111111] text-white border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
           <Reveal>
             <div className="max-w-3xl mb-14">
@@ -134,19 +134,19 @@ export function AboutPage() {
       </section>
 
       {/* Beyond Design + CTA */}
-      <section className="bg-white dark:bg-[#0D0D0D] transition-colors duration-200">
+      <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-5">
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#E31B23] mb-3">
                 Beyond Design
               </p>
-              <h2 className="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-[#111111] dark:text-white">
+              <h2 className="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-[#111111]">
                 {profile.beyondHeadline}
               </h2>
             </div>
 
-            <div className="lg:col-span-7 space-y-5 text-base text-[#555555] dark:text-[#B3B3B3] leading-relaxed">
+            <div className="lg:col-span-7 space-y-5 text-base text-[#555555] leading-relaxed">
               {profile.beyondContent.split('\n\n').map((para, idx) => (
                 <p key={idx}>{para}</p>
               ))}
@@ -154,7 +154,7 @@ export function AboutPage() {
               <div className="pt-6">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.16em] uppercase hover:bg-[#111111] dark:hover:bg-white dark:hover:text-[#111111] transition-colors"
+                  className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.16em] uppercase hover:bg-[#111111] transition-colors"
                 >
                   <span>Let&apos;s Create Something Together</span>
                   <ArrowRight className="w-4 h-4" />

@@ -33,10 +33,10 @@ export function PageHeading({
 
   return (
     <section
-      className={`border-b transition-colors duration-200 ${
+      className={`border-b ${
         dark
-          ? 'bg-[#111111] dark:bg-[#080808] text-white border-white/10'
-          : 'bg-white dark:bg-[#0D0D0D] text-[#111111] dark:text-[#F5F5F5] border-black/10 dark:border-white/12'
+          ? 'bg-[#111111] text-white border-white/10'
+          : 'bg-white text-[#111111] border-black/10'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 pt-16 pb-14 md:pt-24 md:pb-20">
@@ -50,7 +50,7 @@ export function PageHeading({
           {description && (
             <div
               className={`mt-7 max-w-2xl text-base md:text-lg leading-relaxed space-y-4 ${
-                dark ? 'text-white/75' : 'text-[#555555] dark:text-[#B3B3B3]'
+                dark ? 'text-white/75' : 'text-[#555555]'
               }`}
             >
               {description.split('\n\n').map((para, i) => (

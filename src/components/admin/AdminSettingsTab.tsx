@@ -51,23 +51,20 @@ export function AdminSettingsTab({ onNotify }: AdminSettingsTabProps) {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-8 [&_input:not([type=checkbox]):not([type=color])]:bg-[#F4F4F4] dark:[&_input:not([type=checkbox]):not([type=color])]:bg-[#0D0D0D] [&_input:not([type=checkbox]):not([type=color])]:border-black/10 dark:[&_input:not([type=checkbox]):not([type=color])]:border-white/15 [&_input:not([type=checkbox]):not([type=color])]:text-[#111111] dark:[&_input:not([type=checkbox]):not([type=color])]:text-white [&_select]:bg-[#F4F4F4] dark:[&_select]:bg-[#0D0D0D] [&_select]:border-black/10 dark:[&_select]:border-white/15 [&_select]:text-[#111111] dark:[&_select]:text-white [&_textarea]:bg-[#F4F4F4] dark:[&_textarea]:bg-[#0D0D0D] [&_textarea]:border-black/10 dark:[&_textarea]:border-white/15 [&_textarea]:text-[#111111] dark:[&_textarea]:text-white"
-    >
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-black/10 dark:border-white/12">
+    <form onSubmit={handleSubmit} className="space-y-8">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-black/10">
         <div>
-          <h2 className="font-display text-2xl font-extrabold text-[#111111] dark:text-white">
+          <h2 className="font-display text-2xl font-extrabold text-[#111111]">
             Website Settings
           </h2>
-          <p className="text-sm text-[#777777] dark:text-[#999999] mt-1">
+          <p className="text-sm text-[#777777] mt-1">
             Manage brand identity, colours, typography, contact info, hero, and footer.
           </p>
         </div>
         <button
           type="submit"
           disabled={saving}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#111111] dark:hover:bg-white dark:hover:text-[#111111] disabled:opacity-60 transition-colors cursor-pointer self-start"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#111111] disabled:opacity-60 transition-colors cursor-pointer self-start"
         >
           {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
           <span>{saving ? 'Saving...' : 'Save Settings'}</span>
@@ -75,8 +72,8 @@ export function AdminSettingsTab({ onNotify }: AdminSettingsTabProps) {
       </div>
 
       {/* Brand Identity & Logo */}
-      <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-6 md:p-8 space-y-6">
-        <h3 className="font-display text-lg font-bold text-[#111111] dark:text-white">Brand &amp; Logo</h3>
+      <div className="bg-white border border-black/10 p-6 md:p-8 space-y-6">
+        <h3 className="font-display text-lg font-bold text-[#111111]">Brand &amp; Logo</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           <div>
             <label className="block text-xs font-semibold uppercase tracking-[0.12em] mb-2">
@@ -116,11 +113,11 @@ export function AdminSettingsTab({ onNotify }: AdminSettingsTabProps) {
 
         <div className="flex flex-wrap items-center gap-5 pt-2">
           {resolveMediaUrl(form.logoUrl) && (
-            <div className="p-2 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15">
+            <div className="p-2 bg-[#F4F4F4] border border-black/10">
               <CmsImage src={form.logoUrl} alt="Brand logo" className="h-10 w-auto object-contain" />
             </div>
           )}
-          <label className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#111111] dark:bg-white text-white dark:text-[#111111] text-xs font-semibold tracking-[0.12em] uppercase hover:bg-[#E31B23] dark:hover:bg-[#E31B23] dark:hover:text-white transition-colors cursor-pointer">
+          <label className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#111111] text-white text-xs font-semibold tracking-[0.12em] uppercase hover:bg-[#E31B23] transition-colors cursor-pointer">
             <Upload className="w-3.5 h-3.5" />
             <span>{uploadingLogo ? 'Uploading...' : 'Upload Logo Image'}</span>
             <input type="file" accept="image/*" onChange={handleLogoUpload} className="hidden" />
@@ -138,8 +135,8 @@ export function AdminSettingsTab({ onNotify }: AdminSettingsTabProps) {
       </div>
 
       {/* Brand Colours & Typography */}
-      <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-6 md:p-8 space-y-6">
-        <h3 className="font-display text-lg font-bold text-[#111111] dark:text-white">Colours &amp; Typography</h3>
+      <div className="bg-white border border-black/10 p-6 md:p-8 space-y-6">
+        <h3 className="font-display text-lg font-bold text-[#111111]">Colours &amp; Typography</h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           <div>
             <label className="block text-xs font-semibold uppercase tracking-[0.12em] mb-2">
@@ -237,8 +234,8 @@ export function AdminSettingsTab({ onNotify }: AdminSettingsTabProps) {
       </div>
 
       {/* Contact & Social */}
-      <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-6 md:p-8 space-y-6">
-        <h3 className="font-display text-lg font-bold text-[#111111] dark:text-white">Contact &amp; Social Links</h3>
+      <div className="bg-white border border-black/10 p-6 md:p-8 space-y-6">
+        <h3 className="font-display text-lg font-bold text-[#111111]">Contact &amp; Social Links</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
             <label className="block text-xs font-semibold uppercase tracking-[0.12em] mb-2">
@@ -312,9 +309,9 @@ export function AdminSettingsTab({ onNotify }: AdminSettingsTabProps) {
       </div>
 
       {/* Announcement Bar & Hero */}
-      <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-6 md:p-8 space-y-6">
+      <div className="bg-white border border-black/10 p-6 md:p-8 space-y-6">
         <div className="flex items-center justify-between">
-          <h3 className="font-display text-lg font-bold text-[#111111] dark:text-white">
+          <h3 className="font-display text-lg font-bold text-[#111111]">
             Announcement Bar &amp; Homepage Hero
           </h3>
           <label className="inline-flex items-center gap-2 text-xs font-semibold uppercase cursor-pointer">
@@ -427,9 +424,9 @@ export function AdminSettingsTab({ onNotify }: AdminSettingsTabProps) {
       </div>
 
       {/* Statistics & Footer */}
-      <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-6 md:p-8 space-y-6">
+      <div className="bg-white border border-black/10 p-6 md:p-8 space-y-6">
         <div className="flex items-center justify-between">
-          <h3 className="font-display text-lg font-bold text-[#111111] dark:text-white">
+          <h3 className="font-display text-lg font-bold text-[#111111]">
             Statistics Strip &amp; Footer Content
           </h3>
           <button
@@ -528,8 +525,8 @@ export function AdminSettingsTab({ onNotify }: AdminSettingsTabProps) {
       </div>
 
       {/* Budget Dropdown Ranges */}
-      <div className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-6 md:p-8 space-y-4">
-        <h3 className="font-display text-lg font-bold text-[#111111] dark:text-white">
+      <div className="bg-white border border-black/10 p-6 md:p-8 space-y-4">
+        <h3 className="font-display text-lg font-bold text-[#111111]">
           Inquiry Budget Ranges (one per line)
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

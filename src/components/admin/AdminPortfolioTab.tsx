@@ -164,12 +164,12 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
 
   return (
     <div className="space-y-8">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-black/10 dark:border-white/12">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-black/10">
         <div>
-          <h2 className="font-display text-2xl font-extrabold text-[#111111] dark:text-white">
+          <h2 className="font-display text-2xl font-extrabold text-[#111111]">
             Portfolio Management
           </h2>
-          <p className="text-sm text-[#777777] dark:text-[#999999] mt-1">
+          <p className="text-sm text-[#777777] mt-1">
             Add, edit, reorder, feature, publish, or upload screenshots for projects and case studies.
           </p>
         </div>
@@ -179,7 +179,7 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
             setEditing(createEmptyProject(projects.length + 1));
             setIsNew(true);
           }}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#111111] dark:hover:bg-white dark:hover:text-[#111111] transition-colors cursor-pointer self-start"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#111111] transition-colors cursor-pointer self-start"
         >
           <Plus className="w-4 h-4" />
           <span>Add Project</span>
@@ -191,10 +191,10 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
         {projects.map((proj, idx) => (
           <div
             key={proj.id}
-            className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-5 flex flex-col md:flex-row md:items-center justify-between gap-5"
+            className="bg-white border border-black/10 p-5 flex flex-col md:flex-row md:items-center justify-between gap-5"
           >
             <div className="flex items-center gap-4 min-w-0">
-              <div className="w-20 h-14 bg-[#111111] border border-black/10 dark:border-white/15 overflow-hidden shrink-0 flex items-center justify-center text-white text-[11px] font-mono-num">
+              <div className="w-20 h-14 bg-[#111111] border border-black/10 overflow-hidden shrink-0 flex items-center justify-center text-white text-[11px] font-mono-num">
                 {resolveMediaUrl(proj.coverImageUrl) ? (
                   <CmsImage
                     src={proj.coverImageUrl}
@@ -206,21 +206,21 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
                 )}
               </div>
               <div className="min-w-0">
-                <div className="flex items-center gap-2 text-xs text-[#777777] dark:text-[#999999]">
+                <div className="flex items-center gap-2 text-xs text-[#777777]">
                   <span className="font-semibold text-[#E31B23]">{proj.filterCategory}</span>
                   <span>·</span>
                   <span>{proj.status === 'published' ? 'Published' : 'Draft'}</span>
                   {proj.featured && (
                     <>
                       <span>·</span>
-                      <span className="text-[#111111] dark:text-white font-semibold">Featured</span>
+                      <span className="text-[#111111] font-semibold">Featured</span>
                     </>
                   )}
                 </div>
-                <h3 className="font-display text-lg font-bold text-[#111111] dark:text-white truncate">
+                <h3 className="font-display text-lg font-bold text-[#111111] truncate">
                   {proj.title}
                 </h3>
-                <p className="text-xs text-[#777777] dark:text-[#999999] truncate">{proj.categoryLabel}</p>
+                <p className="text-xs text-[#777777] truncate">{proj.categoryLabel}</p>
               </div>
             </div>
 
@@ -230,7 +230,7 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
                 onClick={() => handleMove(idx, -1)}
                 disabled={idx === 0}
                 title="Move up"
-                className="p-2 border border-black/15 dark:border-white/20 text-[#111111] dark:text-white hover:border-[#111111] dark:hover:border-white disabled:opacity-30 cursor-pointer"
+                className="p-2 border border-black/15 text-[#111111] hover:border-[#111111] disabled:opacity-30 cursor-pointer"
               >
                 <ArrowUp className="w-4 h-4" />
               </button>
@@ -239,7 +239,7 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
                 onClick={() => handleMove(idx, 1)}
                 disabled={idx === projects.length - 1}
                 title="Move down"
-                className="p-2 border border-black/15 dark:border-white/20 text-[#111111] dark:text-white hover:border-[#111111] dark:hover:border-white disabled:opacity-30 cursor-pointer"
+                className="p-2 border border-black/15 text-[#111111] hover:border-[#111111] disabled:opacity-30 cursor-pointer"
               >
                 <ArrowDown className="w-4 h-4" />
               </button>
@@ -250,7 +250,7 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
                 className={`p-2 border transition-colors cursor-pointer ${
                   proj.featured
                     ? 'bg-[#E31B23] border-[#E31B23] text-white'
-                    : 'border-black/15 dark:border-white/20 text-[#777777] dark:text-[#999999] hover:text-[#111111] dark:hover:text-white'
+                    : 'border-black/15 text-[#777777] hover:text-[#111111]'
                 }`}
               >
                 <Star className="w-4 h-4" />
@@ -259,7 +259,7 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
                 type="button"
                 onClick={() => toggleStatus(proj)}
                 title={proj.status === 'published' ? 'Set to Draft' : 'Publish'}
-                className="px-3 py-2 border border-black/15 dark:border-white/20 text-xs font-semibold uppercase text-[#111111] dark:text-white hover:border-[#111111] dark:hover:border-white inline-flex items-center gap-1.5 cursor-pointer"
+                className="px-3 py-2 border border-black/15 text-xs font-semibold uppercase text-[#111111] hover:border-[#111111] inline-flex items-center gap-1.5 cursor-pointer"
               >
                 {proj.status === 'published' ? (
                   <>
@@ -268,7 +268,7 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
                   </>
                 ) : (
                   <>
-                    <EyeOff className="w-3.5 h-3.5 text-[#777777] dark:text-[#999999]" />
+                    <EyeOff className="w-3.5 h-3.5 text-[#777777]" />
                     <span>Draft</span>
                   </>
                 )}
@@ -279,7 +279,7 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
                   setEditing(proj);
                   setIsNew(false);
                 }}
-                className="px-3.5 py-2 bg-[#111111] dark:bg-white text-white dark:text-[#111111] text-xs font-semibold uppercase hover:bg-[#E31B23] dark:hover:bg-[#E31B23] dark:hover:text-white inline-flex items-center gap-1.5 cursor-pointer"
+                className="px-3.5 py-2 bg-[#111111] text-white text-xs font-semibold uppercase hover:bg-[#E31B23] inline-flex items-center gap-1.5 cursor-pointer"
               >
                 <Edit3 className="w-3.5 h-3.5" />
                 <span>Edit</span>
@@ -291,7 +291,7 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
                   onNotify(`Deleted "${proj.title}".`);
                 }}
                 title="Delete project"
-                className="p-2 border border-black/15 dark:border-white/20 text-[#777777] dark:text-[#999999] hover:text-[#E31B23] hover:border-[#E31B23] cursor-pointer"
+                className="p-2 border border-black/15 text-[#777777] hover:text-[#E31B23] hover:border-[#E31B23] cursor-pointer"
               >
                 <Trash2 className="w-4 h-4" />
               </button>
@@ -305,16 +305,16 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
         <div className="fixed inset-0 z-50 bg-[#111111]/80 flex items-start justify-center p-4 md:p-8 overflow-y-auto">
           <form
             onSubmit={handleSave}
-            className="bg-white dark:bg-[#171717] border border-black/20 dark:border-white/15 max-w-4xl w-full p-6 md:p-8 space-y-6 my-6 text-[#111111] dark:text-white [&_input:not([type=checkbox])]:bg-[#F4F4F4] dark:[&_input:not([type=checkbox])]:bg-[#0D0D0D] [&_input:not([type=checkbox])]:border-black/10 dark:[&_input:not([type=checkbox])]:border-white/15 [&_input:not([type=checkbox])]:text-[#111111] dark:[&_input:not([type=checkbox])]:text-white [&_select]:bg-[#F4F4F4] dark:[&_select]:bg-[#0D0D0D] [&_select]:border-black/10 dark:[&_select]:border-white/15 [&_select]:text-[#111111] dark:[&_select]:text-white [&_textarea]:bg-[#F4F4F4] dark:[&_textarea]:bg-[#0D0D0D] [&_textarea]:border-black/10 dark:[&_textarea]:border-white/15 [&_textarea]:text-[#111111] dark:[&_textarea]:text-white"
+            className="bg-white border border-black/20 max-w-4xl w-full p-6 md:p-8 space-y-6 my-6 text-[#111111]"
           >
-            <div className="flex items-center justify-between pb-4 border-b border-black/10 dark:border-white/12">
-              <h3 className="font-display text-xl font-extrabold text-[#111111] dark:text-white">
+            <div className="flex items-center justify-between pb-4 border-b border-black/10">
+              <h3 className="font-display text-xl font-extrabold text-[#111111]">
                 {isNew ? 'Add New Project' : `Edit: ${editing.title}`}
               </h3>
               <button
                 type="button"
                 onClick={() => setEditing(null)}
-                className="p-2 text-[#777777] dark:text-[#999999] hover:text-[#111111] dark:hover:text-white cursor-pointer"
+                className="p-2 text-[#777777] hover:text-[#111111] cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -522,7 +522,7 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
             </div>
 
             {/* Cover & Gallery Uploads */}
-            <div className="p-5 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/12 space-y-5">
+            <div className="p-5 bg-[#F4F4F4] border border-black/10 space-y-5">
               <div>
                 <p className="text-xs font-semibold uppercase mb-2">Cover Image</p>
                 <div className="flex flex-wrap items-center gap-4">
@@ -530,10 +530,10 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
                     <CmsImage
                       src={editing.coverImageUrl}
                       alt="Cover preview"
-                      className="w-28 h-20 object-cover border border-black/10 dark:border-white/15"
+                      className="w-28 h-20 object-cover border border-black/10"
                     />
                   )}
-                  <label className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#111111] dark:bg-white text-white dark:text-[#111111] text-xs font-semibold uppercase hover:bg-[#E31B23] dark:hover:bg-[#E31B23] dark:hover:text-white cursor-pointer">
+                  <label className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#111111] text-white text-xs font-semibold uppercase hover:bg-[#E31B23] cursor-pointer">
                     <Upload className="w-3.5 h-3.5" />
                     <span>{uploadingCover ? 'Uploading...' : 'Upload Cover Image'}</span>
                     <input type="file" accept="image/*" onChange={handleCoverUpload} className="hidden" />
@@ -553,7 +553,7 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <p className="text-xs font-semibold uppercase">Project Gallery</p>
-                  <label className="inline-flex items-center gap-2 px-4 py-2 bg-[#E31B23] text-white text-xs font-semibold uppercase hover:bg-[#111111] dark:hover:bg-white dark:hover:text-[#111111] cursor-pointer">
+                  <label className="inline-flex items-center gap-2 px-4 py-2 bg-[#E31B23] text-white text-xs font-semibold uppercase hover:bg-[#111111] cursor-pointer">
                     <Upload className="w-3.5 h-3.5" />
                     <span>{uploadingGallery ? 'Uploading...' : 'Upload Gallery Images'}</span>
                     <input
@@ -571,7 +571,7 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
                     {editing.galleryImages.map((gal, gIdx) => (
                       <div
                         key={gal.id || gIdx}
-                        className="bg-white dark:bg-[#171717] p-3 border border-black/10 dark:border-white/12 grid grid-cols-1 sm:grid-cols-12 gap-3 items-center"
+                        className="bg-white p-3 border border-black/10 grid grid-cols-1 sm:grid-cols-12 gap-3 items-center"
                       >
                         <div className="sm:col-span-2 h-14 bg-[#111111] overflow-hidden">
                           <CmsImage src={gal.url} alt={gal.caption} className="w-full h-full object-cover" />
@@ -611,7 +611,7 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
                               galleryImages: editing.galleryImages.filter((_, i) => i !== gIdx),
                             })
                           }
-                          className="sm:col-span-1 p-1.5 text-[#777777] dark:text-[#999999] hover:text-[#E31B23] cursor-pointer"
+                          className="sm:col-span-1 p-1.5 text-[#777777] hover:text-[#E31B23] cursor-pointer"
                         >
                           <Trash2 className="w-4 h-4" />
                         </button>
@@ -622,7 +622,7 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-black/10 dark:border-white/12">
+            <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-black/10">
               <div className="flex items-center gap-6 text-xs font-semibold uppercase">
                 <label className="inline-flex items-center gap-2 cursor-pointer">
                   <input
@@ -652,14 +652,14 @@ export function AdminPortfolioTab({ onNotify }: AdminPortfolioTabProps) {
                 <button
                   type="button"
                   onClick={() => setEditing(null)}
-                  className="px-5 py-2.5 border border-black/15 dark:border-white/20 text-xs font-semibold uppercase cursor-pointer"
+                  className="px-5 py-2.5 border border-black/15 text-xs font-semibold uppercase cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={saving}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#E31B23] text-white text-xs font-semibold uppercase hover:bg-[#111111] dark:hover:bg-white dark:hover:text-[#111111] cursor-pointer"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#E31B23] text-white text-xs font-semibold uppercase hover:bg-[#111111] cursor-pointer"
                 >
                   {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
                   <span>Save Project</span>

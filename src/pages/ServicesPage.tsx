@@ -24,7 +24,7 @@ export function ServicesPage() {
       />
 
       {/* Detailed Service Sections */}
-      <section className="bg-white dark:bg-[#0D0D0D] divide-y divide-black/10 dark:divide-white/12 border-b border-black/10 dark:border-white/12 transition-colors duration-200">
+      <section className="bg-white divide-y divide-black/10 border-b border-black/10">
         {publishedServices.map((service) => {
           const imgResolved = resolveMediaUrl(service.imageUrl);
           return (
@@ -36,17 +36,17 @@ export function ServicesPage() {
                       <span className="font-mono-num text-sm font-bold text-[#E31B23]">
                         SERVICE {service.number}
                       </span>
-                      <span className="text-[#777777] dark:text-[#9A9A9A]">/</span>
-                      <span className="text-xs font-semibold tracking-[0.14em] uppercase text-[#777777] dark:text-[#9A9A9A]">
+                      <span className="text-[#777777]">/</span>
+                      <span className="text-xs font-semibold tracking-[0.14em] uppercase text-[#777777]">
                         {service.title}
                       </span>
                     </div>
-                    <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-[#111111] dark:text-white">
+                    <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-[#111111]">
                       {service.headline || service.title}
                     </h2>
 
                     {imgResolved && (
-                      <div className="mt-8 aspect-[4/3] bg-[#F4F4F4] dark:bg-[#171717] border border-black/10 dark:border-white/12 overflow-hidden">
+                      <div className="mt-8 aspect-[4/3] bg-[#F4F4F4] border border-black/10 overflow-hidden">
                         <CmsImage
                           src={service.imageUrl}
                           alt={service.title}
@@ -57,7 +57,7 @@ export function ServicesPage() {
                   </div>
 
                   <div className="lg:col-span-7 flex flex-col justify-between gap-8">
-                    <div className="space-y-4 text-base text-[#555555] dark:text-[#B3B3B3] leading-relaxed">
+                    <div className="space-y-4 text-base text-[#555555] leading-relaxed">
                       {(service.description || service.shortDescription)
                         .split('\n\n')
                         .map((para, i) => (
@@ -66,12 +66,12 @@ export function ServicesPage() {
                     </div>
 
                     <div>
-                      <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#111111] dark:text-white mb-4">
+                      <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#111111] mb-4">
                         What&apos;s Included
                       </p>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 border-t border-black/10 dark:border-white/12 pt-5">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 border-t border-black/10 pt-5">
                         {service.deliverables.map((item) => (
-                          <div key={item} className="flex items-start gap-2.5 text-sm text-[#111111] dark:text-[#EAEAEA]">
+                          <div key={item} className="flex items-start gap-2.5 text-sm text-[#111111]">
                             <span className="w-1.5 h-1.5 bg-[#E31B23] mt-2 shrink-0" />
                             <span>{item}</span>
                           </div>
@@ -80,11 +80,11 @@ export function ServicesPage() {
                     </div>
 
                     {service.idealFor && (
-                      <div className="bg-[#F4F4F4] dark:bg-[#171717] p-5 border border-black/10 dark:border-white/12 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                        <p className="text-sm text-[#111111] dark:text-white font-medium">{service.idealFor}</p>
+                      <div className="bg-[#F4F4F4] p-5 border border-black/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <p className="text-sm text-[#111111] font-medium">{service.idealFor}</p>
                         <Link
                           to="/contact"
-                          className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.14em] uppercase text-[#E31B23] hover:text-[#111111] dark:hover:text-white transition-colors shrink-0"
+                          className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.14em] uppercase text-[#E31B23] hover:text-[#111111] transition-colors shrink-0"
                         >
                           <span>Inquire</span>
                           <ArrowRight className="w-3.5 h-3.5" />
@@ -100,7 +100,7 @@ export function ServicesPage() {
       </section>
 
       {/* Industries I Work With */}
-      <section className="bg-[#111111] dark:bg-[#080808] text-white border-b border-white/10 transition-colors duration-200">
+      <section className="bg-[#111111] text-white border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
           <Reveal>
             <div className="max-w-2xl mb-12">
