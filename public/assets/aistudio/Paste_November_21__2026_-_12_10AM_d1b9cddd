@@ -1,0 +1,1265 @@
+# PROJECT: AKANDE OLALEKAN — PERSONAL PORTFOLIO WEBSITE
+
+## 1. PROJECT OVERVIEW
+
+Design and develop a premium, modern, fully responsive personal portfolio website for **Akande Olalekan**, professionally known as **Lekzy**.
+
+The website should establish a strong personal brand and showcase my expertise, professional experience, creative projects, services and capabilities across different areas of design and digital development.
+
+This should not look like a generic portfolio template. I want a distinctive, professionally art-directed website that feels like the portfolio of an experienced international creative professional.
+
+The website must communicate creativity, confidence, professionalism, attention to detail and technical competence.
+
+**Primary brand name:** Akande Olalekan  
+**Creative identity:** Lekzy Graphics  
+**Professional title:** Multidisciplinary Designer & Digital Creative  
+**Specialisations:** Product Design, Brand Identity, Graphic Design, Social Media Design, Website Design & Development.
+
+**Location:** Ibadan, Nigeria.  
+**Availability:** Open to remote opportunities, freelance projects, contract work and international collaborations.
+
+---
+
+# 2. BRAND IDENTITY AND VISUAL DIRECTION
+
+## Brand Colours
+
+My official brand colours are RED, BLACK and WHITE.
+
+Use these colours consistently throughout the entire website.
+
+- Primary Red: #E31B23
+- Black: #111111
+- White: #FFFFFF
+- Secondary Black: #1A1A1A
+- Light Grey: #F4F4F4
+- Muted Grey: #777777
+
+Red should be the primary accent colour. Use it strategically for important buttons, active navigation indicators, highlighted words, small decorative elements, hover states and selected interface components.
+
+Black should provide contrast, depth and sophistication.
+
+White should provide breathing space, readability and a clean visual structure.
+
+Do not introduce unrelated accent colours such as gold, blue, purple or green.
+
+## Design Style
+
+The overall design should be:
+
+- Minimalist but visually expressive.
+- Modern and editorial.
+- Premium and sophisticated.
+- Bold typography-driven.
+- Creative without being cluttered.
+- Professional and internationally competitive.
+- Visually distinctive with strong layouts.
+
+Use generous whitespace, carefully structured grids, strong typography, oversized headlines and well-presented project imagery.
+
+Avoid generic AI-generated website aesthetics, excessive gradients, unnecessary glassmorphism, childish illustrations, excessive rounded cards and repetitive layouts.
+
+The website should have a strong visual personality.
+
+## Typography
+
+Use a modern typography combination:
+
+- Headings: Manrope, Sora or a similarly strong geometric sans-serif.
+- Body text: Inter.
+- Navigation: Clean, medium-weight sans-serif.
+
+Use large expressive headlines, balanced line heights and clear typographic hierarchy.
+
+Some headings can have selected words highlighted in brand red.
+
+---
+
+# 3. WEBSITE NAVIGATION AND PAGE STRUCTURE
+
+Build the following main pages:
+
+1. Home
+2. About Me
+3. Services
+4. Portfolio
+5. My Process
+6. Experience & Skills
+7. Contact
+
+Also create:
+
+- Individual project case study pages.
+- Privacy Policy page.
+- Custom 404 error page.
+
+The navigation should be clean and fixed or sticky where appropriate.
+
+Desktop navigation:
+
+AKANDE OLALEKAN. | Home | About | Services | Portfolio | Experience | Contact
+
+Include a prominent red "LET'S TALK" or "START A PROJECT" button.
+
+On mobile, use an elegant hamburger menu with a smooth opening and closing animation.
+
+The logo should display AKANDE OLALEKAN or a distinctive "AO" monogram. Use LEKZY as a secondary creative identity where appropriate.
+
+---
+
+# 4. HOME PAGE
+
+The homepage must be visually impressive and immediately communicate who I am, what I do and the quality of work I deliver.
+
+## Section 1: Hero
+
+Small introductory label:
+
+HELLO, I'M AKANDE OLALEKAN.
+
+Main headline:
+
+"I DESIGN DIGITAL EXPERIENCES, BUILD BRANDS AND CREATE SOLUTIONS THAT MATTER."
+
+Highlight selected words in red.
+
+Supporting text:
+
+"I'm Akande Olalekan, a multidisciplinary digital creative specializing in product design, brand identity, visual communication and web design.
+
+I work with businesses, startups and individuals to transform ideas into meaningful digital experiences and compelling visual identities.
+
+With a combination of creativity, strategic thinking and technical understanding, I create designs that don't just look good but communicate clearly, solve problems and help brands connect with their audiences."
+
+Buttons:
+- EXPLORE MY WORK
+- LET'S WORK TOGETHER
+
+Include:
+- Based in Ibadan, Nigeria.
+- Available for Remote Projects Worldwide.
+- Open to Freelance, Contract and Full-Time Opportunities.
+
+Visual direction:
+
+Create a split-layout hero section with bold typography on one side and a professional portrait of me on the other.
+
+Allow the portrait to have a creative editorial treatment, subtle movement or carefully arranged project previews.
+
+Do not generate a fake photograph of me. Provide an image upload field in the CMS so I can upload my actual portrait.
+
+## Section 2: About Preview
+
+Label: A LITTLE ABOUT ME
+
+Headline:
+
+"CREATIVE THINKING. STRATEGIC DESIGN. DIGITAL SOLUTIONS."
+
+Content:
+
+"I am a designer who enjoys turning complex ideas into simple, functional and visually engaging experiences.
+
+My work sits at the intersection of creativity, technology and communication. From developing brand identities and creating marketing materials to designing websites and digital interfaces, I approach every project with the goal of creating something purposeful and impactful.
+
+Over the years, I have worked with different clients, businesses and organisations across various industries, helping them communicate their ideas, establish stronger brand identities and build a better digital presence.
+
+I believe great design goes beyond aesthetics. It is about understanding people, identifying problems and creating solutions that make a difference."
+
+Button: MORE ABOUT ME.
+
+## Section 3: Services Preview
+
+Label: WHAT I DO
+
+Headline:
+
+"CREATIVE SERVICES BUILT AROUND YOUR BUSINESS NEEDS."
+
+Display four service categories with attractive visual representations.
+
+### 01. Brand Identity & Visual Design
+
+Creating distinctive visual identities that give brands a consistent, professional and memorable presence.
+
+Services include:
+- Logo Design.
+- Brand Guidelines.
+- Visual Identity.
+- Brand Collateral.
+- Typography and Colour Systems.
+
+### 02. Graphic & Social Media Design
+
+Designing compelling visual content that captures attention, communicates messages and supports marketing campaigns.
+
+Services include:
+- Social Media Creatives.
+- Campaign Designs.
+- Promotional Flyers.
+- Marketing Materials.
+- Advertising Graphics.
+
+### 03. Website Design & Development
+
+Designing and developing responsive, user-friendly websites that help businesses establish credibility, showcase their offerings and connect with customers.
+
+Services include:
+- WordPress Websites.
+- Business Websites.
+- E-commerce Websites.
+- Landing Pages.
+- Website Redesign.
+- Responsive Web Design.
+
+### 04. Product Design & UI/UX
+
+Creating thoughtful digital interfaces and user experiences with a focus on usability, structure and intuitive interaction.
+
+Services include:
+- UI Design.
+- Wireframing.
+- Prototyping.
+- User Flows.
+- Dashboard Design.
+- Design Systems.
+
+Button: VIEW ALL SERVICES.
+
+## Section 4: Featured Projects
+
+Label: SELECTED WORK
+
+Headline:
+
+"A SELECTION OF IDEAS BROUGHT TO LIFE."
+
+Description:
+
+"Every project represents an opportunity to solve a problem, communicate an idea or create something meaningful. Explore a selection of my work across branding, graphic design, digital experiences and website development."
+
+Display a visually engaging project grid with large project images, project names, service categories and hover interactions.
+
+Featured projects:
+
+1. Delightful Juices — E-commerce Website Design & Development.
+2. Dominion Vascular Surgical Specialists — Graphic Design & Healthcare Marketing.
+3. Genius Travels — Brand Communication & Social Media Design.
+4. Bavic Properties — Graphic Design & Campaign Design.
+5. Leyi Herbs Market — E-commerce Website Design.
+6. Elite Treat Chop — Website Design & Digital Experience.
+
+Use actual project screenshots and images uploaded through the CMS. Do not invent project screenshots or claim that illustrative images are actual client work.
+
+Each project should link to its individual case study page.
+
+Button: VIEW ALL PROJECTS.
+
+## Section 5: Why Work With Me?
+
+Headline:
+
+"DESIGN WITH PURPOSE. CREATIVITY WITH DIRECTION."
+
+Present five principles:
+
+1. Purpose-Driven Creativity — Every design decision should serve a purpose.
+2. Attention to Detail — Careful consideration of typography, colour, layout and functionality.
+3. Understanding Business Needs — Creative solutions that support real business objectives.
+4. Continuous Improvement — Staying curious, learning and improving my craft.
+5. Collaboration & Communication — Clear communication and constructive collaboration.
+
+## Section 6: Work Process Preview
+
+Headline:
+
+"A CLEAR PROCESS. BETTER RESULTS."
+
+Show five steps:
+
+01. Discovery — Understanding your goals, audience and requirements.
+
+02. Strategy — Defining the creative direction and project structure.
+
+03. Design — Developing concepts, layouts and visual solutions.
+
+04. Refinement — Reviewing feedback and making necessary improvements.
+
+05. Delivery — Finalising and delivering the completed project.
+
+Button: SEE HOW I WORK.
+
+## Section 7: Testimonials
+
+Headline:
+
+"WHAT WORKING TOGETHER LOOKS LIKE."
+
+Create a clean testimonial section that supports:
+- Client name.
+- Client position.
+- Company name.
+- Testimonial.
+- Optional client photograph.
+
+Make testimonials editable from the CMS.
+
+Do not create fake testimonials. If no testimonials have been uploaded, hide the section or display a neutral placeholder in the administration preview only.
+
+## Section 8: Final CTA
+
+Headline:
+
+"HAVE AN IDEA? LET'S BRING IT TO LIFE."
+
+Description:
+
+"Whether you're building a new brand, improving your digital presence or looking for a creative partner to support your next project, I'd love to hear from you.
+
+Let's discuss your ideas and explore how we can create something meaningful together."
+
+Buttons:
+- START A PROJECT.
+- CONTACT ME.
+
+---
+
+# 5. ABOUT ME PAGE
+
+Hero headline:
+
+"CREATING WITH PURPOSE. DESIGNING WITH INTENTION."
+
+Introduction:
+
+"I'm Akande Olalekan, a multidisciplinary designer and digital creative with a passion for visual communication, digital experiences and creative problem-solving.
+
+I help businesses, startups and individuals bring their ideas to life through thoughtful design, strategic branding and functional digital solutions.
+
+My journey in the creative industry has allowed me to work across different areas of design, giving me the opportunity to understand how visual communication, technology and business objectives come together.
+
+Today, I combine my creative background with technical skills to deliver solutions that help brands communicate better, build credibility and create meaningful connections with their audiences."
+
+## My Story
+
+Headline:
+
+"A JOURNEY DRIVEN BY CREATIVITY AND CURIOSITY."
+
+Content:
+
+"My journey into design started with an interest in creativity, visual communication and the possibilities of turning ideas into something people can see, understand and interact with.
+
+Over time, that interest developed into a professional career. I began exploring graphic design, learning how to use design tools, understanding visual hierarchy and developing the ability to communicate messages through compelling visuals.
+
+As my experience grew, I became interested in more than just creating graphics. I wanted to understand how brands are built, how businesses communicate with their audiences and how digital experiences influence the way people interact with products and services.
+
+This curiosity led me into brand identity design, social media design, website design and eventually product design.
+
+Working with clients across different industries has exposed me to different business challenges and creative requirements. Each project has strengthened my ability to think critically, interpret briefs, develop ideas and deliver solutions that align with specific objectives.
+
+I enjoy the balance between creativity and functionality. Whether I'm designing a brand identity, creating a campaign or developing a website, my goal is always to make the outcome visually engaging, useful and purposeful.
+
+I'm still learning, exploring and improving, because I believe becoming a better designer is a continuous process."
+
+## My Design Philosophy
+
+Headline:
+
+"I BELIEVE GOOD DESIGN SHOULD DO MORE THAN LOOK GOOD."
+
+Present three principles:
+
+CLARITY — A good design should communicate its message without unnecessary complexity.
+
+FUNCTIONALITY — Visual appeal should work alongside usability and purpose.
+
+CONSISTENCY — Strong design systems create recognisable and trustworthy brand experiences.
+
+## Beyond Design
+
+Headline:
+
+"ALWAYS EXPLORING. ALWAYS GROWING."
+
+Content:
+
+"Outside the actual design process, I'm interested in the intersection of creativity, technology, entrepreneurship and business development.
+
+I enjoy exploring new digital tools, understanding emerging design trends, experimenting with creative ideas and learning how technology can make work more efficient.
+
+I also value collaboration and the opportunity to work with people who are building something meaningful.
+
+For me, growth is not just about acquiring new skills. It's about becoming more intentional, improving how I think and developing the ability to contribute more value through my work."
+
+Include a prominent portrait section and CTA: LET'S CREATE SOMETHING TOGETHER.
+
+---
+
+# 6. SERVICES PAGE
+
+Hero headline:
+
+"CREATIVE & DIGITAL SOLUTIONS FOR BRANDS READY TO GROW."
+
+Introduction:
+
+"I offer a range of design and digital services that help businesses establish their identities, strengthen their online presence and communicate their value effectively.
+
+Whether you need a new visual identity, compelling marketing designs or a functional website, I bring creativity, strategic thinking and attention to detail to every project."
+
+Create four detailed service sections.
+
+## SERVICE 01: BRAND IDENTITY & VISUAL DESIGN
+
+Headline:
+
+"BUILD A BRAND PEOPLE RECOGNISE AND REMEMBER."
+
+Description:
+
+"Your brand is more than a logo. It is the visual language, personality and experience that shape how people perceive your business.
+
+I help businesses develop consistent and meaningful visual identities that reflect their values, communicate their positioning and create a recognisable presence."
+
+Include:
+- Logo Design and Development.
+- Brand Identity Systems.
+- Brand Colour Palettes.
+- Typography Selection.
+- Brand Guidelines.
+- Business Cards and Stationery.
+- Marketing Collateral.
+- Brand Application Mockups.
+- Visual Brand Consistency.
+
+Ideal for startups, new businesses, rebranding companies and organisations.
+
+## SERVICE 02: GRAPHIC DESIGN & SOCIAL MEDIA DESIGN
+
+Headline:
+
+"VISUAL COMMUNICATION THAT GETS ATTENTION."
+
+Description:
+
+"In a competitive digital environment, how your brand communicates visually matters.
+
+I create strategic graphic designs and social media creatives that help brands communicate their messages, promote products and services, and maintain a consistent online presence."
+
+Include:
+- Social Media Post Designs.
+- Instagram Carousel Designs.
+- Promotional Flyers.
+- Campaign Creatives.
+- Event Graphics.
+- Advertising Designs.
+- Product Promotional Graphics.
+- Digital Marketing Materials.
+
+Ideal for businesses, marketing teams, event organisers, agencies and personal brands.
+
+## SERVICE 03: WEBSITE DESIGN & DEVELOPMENT
+
+Headline:
+
+"WEBSITES THAT MAKE YOUR BUSINESS WORK BETTER ONLINE."
+
+Description:
+
+"A website should do more than provide information. It should represent your business professionally, guide visitors and make it easier for people to engage with your products or services.
+
+I design and develop responsive websites that combine visual presentation, usability and functionality."
+
+Include:
+- Business Website Design.
+- WordPress Website Development.
+- E-commerce Website Development.
+- Landing Page Design.
+- Website Redesign.
+- Responsive Mobile and Desktop Layouts.
+- Website Content Arrangement.
+- WooCommerce Integration.
+- Elementor Implementation.
+- Basic SEO Structure.
+- Website Maintenance and Updates.
+
+Ideal for small businesses, startups, service providers, retailers, consultants and organisations.
+
+## SERVICE 04: PRODUCT DESIGN & UI/UX
+
+Headline:
+
+"CREATING DIGITAL EXPERIENCES AROUND REAL USER NEEDS."
+
+Description:
+
+"Digital products should be easy to understand, intuitive to navigate and designed around the people who use them.
+
+My approach to product and interface design focuses on understanding the purpose of a product and translating its requirements into clear, functional and engaging digital experiences."
+
+Include:
+- User Interface Design.
+- User Experience Planning.
+- Wireframing.
+- User Flows.
+- Website and Mobile App Interfaces.
+- Interactive Prototyping.
+- Dashboard Design.
+- Design Systems and Components.
+- Responsive Interface Layouts.
+
+Ideal for startups, technology companies, founders, product teams and businesses developing digital platforms.
+
+## Industries I Work With
+
+Display the following as an attractive grid:
+
+- Healthcare & Medical Services.
+- Travel & Tourism.
+- Real Estate & Property.
+- Food & Beverage.
+- Retail & E-commerce.
+- Technology & Startups.
+- Events & Entertainment.
+- Professional Services.
+
+Finish with a CTA: DISCUSS YOUR PROJECT.
+
+---
+
+# 7. PORTFOLIO PAGE
+
+This is one of the most important sections of the website.
+
+Make it highly visual, image-focused and easy to navigate.
+
+Hero headline:
+
+"SELECTED WORK. THOUGHTFUL IDEAS. REAL CREATIVE SOLUTIONS."
+
+Description:
+
+"Welcome to my portfolio, a collection of creative projects spanning brand identity, graphic design, social media campaigns, website development and digital product experiences.
+
+Each project represents a different challenge, creative direction and opportunity to create something meaningful."
+
+## Portfolio Filters
+
+Create functional filter buttons:
+
+- ALL PROJECTS.
+- BRANDING.
+- GRAPHIC DESIGN.
+- SOCIAL MEDIA.
+- WEBSITE DESIGN.
+- UI/UX DESIGN.
+
+Filtering must work dynamically without reloading the entire page.
+
+## Project Grid
+
+Include the following initial project entries:
+
+01. DELIGHTFUL JUICES
+Category: E-commerce Website Design & Development.
+
+Description:
+"A digital storefront created for a beverage brand, focused on presenting its products, communicating its brand story and supporting online and wholesale enquiries."
+
+02. DOMINION VASCULAR SURGICAL SPECIALISTS
+Category: Graphic Design & Digital Marketing.
+
+Description:
+"A collection of healthcare communication and awareness creatives designed to help a specialist medical practice communicate its services, educate audiences and promote patient engagement."
+
+03. GENIUS TRAVELS
+Category: Brand Communication & Social Media.
+
+Description:
+"Promotional and marketing creatives for a travel brand, designed to showcase destinations, communicate travel packages and encourage enquiries."
+
+04. BAVIC PROPERTIES
+Category: Graphic Design & Campaign Design.
+
+Description:
+"Real estate marketing materials developed to communicate property offerings, promotional campaigns and important brand information."
+
+05. LEYI HERBS MARKET
+Category: E-commerce Website Design.
+
+Description:
+"An online marketplace project focused on presenting herbal products through an organised shopping experience, product discovery and e-commerce functionality."
+
+06. ELITE TREAT CHOP
+Category: Website Design & Digital Experience.
+
+Description:
+"A food business website project focused on presenting menu offerings, creating a seamless browsing experience and providing an organised platform for customer engagement."
+
+## Individual Project Case Study Pages
+
+Every project must open its own detailed case study page.
+
+Each case study should have:
+
+1. Project title.
+2. Project overview.
+3. Client or brand information.
+4. Industry.
+5. Services provided.
+6. Project duration.
+7. Year completed.
+8. Project background.
+9. Challenge.
+10. Creative approach.
+11. Design and development process.
+12. Final outcome.
+13. My specific contribution.
+14. Project gallery.
+15. Related projects.
+16. Contact CTA.
+
+The project gallery should support multiple images, screenshots, website previews, mockups and mobile layouts.
+
+Allow images to be enlarged through a lightbox.
+
+Use different image sizes and layouts to make case studies feel editorial rather than repetitive.
+
+All project content, images, categories and details must be editable through the CMS.
+
+Do not invent project performance statistics or results.
+
+---
+
+# 8. MY PROCESS PAGE
+
+Hero headline:
+
+"GOOD WORK STARTS WITH A GOOD PROCESS."
+
+Introduction:
+
+"Every successful project requires more than creative ideas. It requires clear communication, proper planning, thoughtful execution and attention to detail.
+
+My process is designed to make collaboration straightforward while ensuring that every stage of the project contributes towards the desired outcome."
+
+Create five visually distinctive process sections:
+
+01. DISCOVERY & UNDERSTANDING
+
+"Every project starts with a conversation. I take time to understand your business, objectives, target audience, expectations and project requirements."
+
+Deliverable: Project brief and requirements.
+
+02. RESEARCH & DIRECTION
+
+"After understanding the project, I explore relevant references, visual directions and possible solutions. This helps establish a clear creative direction before execution."
+
+Deliverable: Creative direction and project plan.
+
+03. DESIGN & DEVELOPMENT
+
+"This is where ideas begin to take shape. I work on the actual designs, layouts, interfaces or website implementation, depending on the project."
+
+Deliverable: Initial concepts, designs or development preview.
+
+04. REVIEW & REFINEMENT
+
+"I present the work for review, receive feedback and make the agreed adjustments to ensure the outcome aligns with the project requirements."
+
+Deliverable: Refined and approved project.
+
+05. FINAL DELIVERY
+
+"Once everything is approved, I prepare and deliver the final files, assets or website, depending on the agreed scope."
+
+Deliverable: Completed project and agreed handover materials.
+
+Include a final section titled:
+
+"A WORKING RELATIONSHIP BUILT ON CLARITY."
+
+List:
+- Clear communication throughout the project.
+- Defined project scope and expectations.
+- Attention to design quality and detail.
+- Structured feedback and revision stages.
+- Agreed timelines and delivery milestones.
+- Professional handling of project materials.
+
+CTA: START A PROJECT.
+
+---
+
+# 9. EXPERIENCE & SKILLS PAGE
+
+Hero headline:
+
+"EXPERIENCE, SKILLS & THE TOOLS BEHIND MY WORK."
+
+Introduction:
+
+"My professional journey has been shaped by hands-on experience, continuous learning and working on creative projects across different industries.
+
+Over the years, I have developed a combination of creative and technical skills that allow me to approach projects from different perspectives, from visual communication and brand development to website design and digital experiences."
+
+## Professional Experience
+
+HEAD OF CREATIVE DESIGN
+
+October 2024 – Present.
+
+Responsibilities:
+- Leading creative design direction across projects.
+- Developing brand identities and marketing materials.
+- Creating visual content for digital platforms.
+- Coordinating design tasks and creative deliverables.
+- Working with team members to maintain visual consistency.
+- Contributing to website design and development.
+- Ensuring projects align with client requirements and brand standards.
+
+FREELANCE GRAPHIC & WEB DESIGNER
+
+2020 – Present.
+
+Responsibilities:
+- Designing visual identities and marketing materials.
+- Creating social media content and promotional campaigns.
+- Designing and developing business websites.
+- Working directly with clients to understand project requirements.
+- Managing creative projects from concept to delivery.
+- Providing digital design solutions across different industries.
+
+## Technical Skills
+
+Organise the skills into categories.
+
+DESIGN & CREATIVE TOOLS:
+- Adobe Photoshop.
+- Adobe Illustrator.
+- CorelDRAW.
+- Figma.
+
+WEBSITE & DIGITAL TOOLS:
+- WordPress.
+- Elementor.
+- WooCommerce.
+- ShopLentor.
+
+PRODUCT & INTERFACE DESIGN:
+- UI Design.
+- Wireframing.
+- Prototyping.
+- Responsive Design.
+
+PRODUCTIVITY & COLLABORATION:
+- Microsoft Word.
+- Microsoft Excel.
+- Microsoft PowerPoint.
+- Microsoft 365.
+
+## Education & Qualifications
+
+B.Sc. MATHEMATICAL SCIENCE
+Adekunle Ajasin University.
+September 2018.
+
+CERTIFICATE IN GRAPHIC & WEB DESIGN
+CareerEdge Institute, Ibadan.
+November 2020.
+
+NYSC DISCHARGE CERTIFICATE
+October 2019.
+
+CERTIFICATE IN COMPUTER BASICS & MICROSOFT OFFICE
+Covenant Computer Institute.
+March 2015.
+
+## Core Competencies
+
+- Creative Problem-Solving.
+- Visual Communication.
+- Design Thinking.
+- Brand Consistency.
+- Layout and Composition.
+- Typography and Colour Theory.
+- Client Communication.
+- Project Coordination.
+- Creative Direction.
+- Attention to Detail.
+- Time Management.
+- Collaboration.
+
+## Professional Availability
+
+Headline:
+
+"OPEN TO MEANINGFUL OPPORTUNITIES."
+
+Content:
+
+"I'm interested in working with forward-thinking businesses, creative agencies, startups and organisations that value thoughtful design and digital innovation.
+
+I'm open to remote opportunities, freelance collaborations, contract engagements and suitable full-time roles, particularly within the UK, Europe, Africa and international markets."
+
+CTA: LET'S CONNECT.
+
+---
+
+# 10. CONTACT PAGE
+
+Hero headline:
+
+"LET'S TALK ABOUT WHAT YOU'RE BUILDING."
+
+Description:
+
+"Have a project in mind, need a creative partner or looking to discuss a professional opportunity?
+
+I'm always interested in connecting with people and businesses working on meaningful ideas.
+
+Whether you need a brand identity, a website, digital design support or someone to collaborate with your team, let's start a conversation."
+
+## Contact Details
+
+Name: Akande Olalekan.
+
+Location: Ibadan, Oyo State, Nigeria.
+
+Availability: Remote Projects Worldwide.
+
+Social links:
+
+Behance: https://www.behance.net/lagraphix
+
+Instagram: https://www.instagram.com/lekzy_a_graphics/
+
+Pinterest: https://www.pinterest.com/Lekzy_a_graphics/
+
+Provide an editable professional email field in the CMS.
+
+## Project Inquiry Form
+
+Create a fully functional contact form with these fields:
+
+- Full Name.
+- Email Address.
+- Company / Brand.
+- Service Required.
+- Project Budget.
+- Project Timeline.
+- Project Description.
+
+Service dropdown:
+
+- Brand Identity & Logo Design.
+- Graphic Design.
+- Social Media Design.
+- Website Design & Development.
+- Product Design / UI/UX.
+- Other / Multiple Services.
+
+Budget dropdown: Use editable budget ranges with support for NGN, USD and GBP.
+
+Timeline dropdown:
+- As Soon As Possible.
+- Within 1–2 Weeks.
+- Within 1 Month.
+- Flexible Timeline.
+
+Submit button: SEND PROJECT INQUIRY.
+
+The form must include proper validation, loading states, success feedback and error handling.
+
+Connect the form to a working backend or configured email delivery service. Do not create a form that only looks functional without actually submitting enquiries.
+
+Success message:
+
+"Thank you for reaching out. Your enquiry has been received. I'll review the details and get back to you as soon as possible."
+
+Also include a WhatsApp contact button with an editable phone number. Do not invent a phone number.
+
+---
+
+# 11. FOOTER
+
+Create a sophisticated dark footer with white typography and red accents.
+
+Brand:
+
+AKANDE OLALEKAN.
+
+Headline:
+
+"IDEAS INTO DESIGN. DESIGN INTO IMPACT."
+
+Description:
+
+"I'm Akande Olalekan, a multidisciplinary designer creating meaningful brand identities, digital experiences and creative solutions for businesses and individuals."
+
+Footer navigation:
+
+EXPLORE:
+- Home.
+- About Me.
+- Services.
+- Portfolio.
+- Experience.
+- Contact.
+
+CONNECT:
+- Behance.
+- Instagram.
+- Pinterest.
+- LinkedIn.
+- Email.
+
+Final CTA:
+
+"HAVE A PROJECT IN MIND?"
+
+"Let's make something meaningful together."
+
+Button: LET'S WORK TOGETHER.
+
+Copyright:
+
+© 2026 Akande Olalekan. All rights reserved.
+
+---
+
+# 12. ADDITIONAL WEBSITE COMPONENTS
+
+## Announcement Bar
+
+Add a small optional announcement bar:
+
+"AVAILABLE FOR SELECT FREELANCE PROJECTS AND REMOTE OPPORTUNITIES. LET'S CONNECT."
+
+Make it editable and removable from the CMS.
+
+## Statistics Section
+
+Create an editable statistics component.
+
+Possible items:
+- 6+ Years of Creative Experience.
+- Multiple Industries Served.
+- Branding, Design & Web Development.
+- Remote Collaborations.
+
+Do not invent completed project or client counts.
+
+## Frequently Asked Questions
+
+Include:
+
+1. What services do you offer?
+
+"I offer brand identity design, graphic design, social media design, website design and development, and digital interface design."
+
+2. Do you work with international clients?
+
+"Yes. I work with clients across different locations and am open to remote projects and collaborations worldwide."
+
+3. Can I hire you for a single project?
+
+"Absolutely. I accept individual projects as well as ongoing creative engagements, depending on availability and project requirements."
+
+4. Do you offer ongoing design support?
+
+"Yes. I can provide ongoing design and website support through agreed monthly or project-based arrangements."
+
+5. How do we get started?
+
+"Simply contact me with details about your project. We'll discuss your requirements, timeline and budget before agreeing on the next steps."
+
+6. How long does a project take?
+
+"Timelines depend on the nature and complexity of the project. A timeline will be agreed upon after reviewing your requirements."
+
+## Custom 404 Page
+
+Headline:
+
+"LOOKS LIKE YOU'VE TAKEN A CREATIVE DETOUR."
+
+Description:
+
+"The page you're looking for doesn't exist or may have been moved. Let's get you back to something more interesting."
+
+Button: BACK TO HOMEPAGE.
+
+---
+
+# 13. CMS AND ADMIN DASHBOARD
+
+This is a very important requirement.
+
+I want a functional, secure and easy-to-use administration dashboard where I can manage the website without editing code.
+
+Build an admin dashboard with authentication and persistent data storage.
+
+The admin dashboard should allow me to manage:
+
+## Website Settings
+- Website logo and monogram.
+- Brand name.
+- Brand colours.
+- Typography preferences.
+- Contact email.
+- WhatsApp number.
+- Social media links.
+- SEO information.
+- Footer content.
+- Announcement bar.
+- Homepage hero content.
+
+## Profile Management
+- Upload and change profile photograph.
+- Edit biography.
+- Update professional title.
+- Update location.
+- Edit professional availability.
+- Upload CV.
+- Update education and experience.
+
+## Portfolio Management
+- Add new projects.
+- Edit existing projects.
+- Delete projects.
+- Upload multiple project images.
+- Create project categories.
+- Add project descriptions.
+- Edit project case studies.
+- Add project thumbnails and cover images.
+- Reorder projects.
+- Feature or unfeature projects.
+- Set project visibility to published or draft.
+
+## Services Management
+- Add services.
+- Edit service descriptions.
+- Upload service images.
+- Manage service categories.
+- Reorder services.
+- Publish or hide services.
+
+## Testimonials Management
+- Add testimonials.
+- Edit testimonials.
+- Upload client images.
+- Manage client names and positions.
+- Publish or hide testimonials.
+
+## Contact Management
+- View submitted enquiries.
+- View sender details.
+- View project descriptions.
+- Mark enquiries as read.
+- Mark enquiries as completed.
+- Delete enquiries.
+
+## SEO Management
+- Edit page titles.
+- Edit meta descriptions.
+- Upload social sharing images.
+- Set page-specific SEO information.
+
+The CMS must use actual persistent database storage and image storage.
+
+If using Supabase, implement:
+- Supabase authentication.
+- Database tables.
+- Storage buckets.
+- Proper access policies and Row Level Security.
+- Secure admin-only write access.
+
+Do not hardcode all content into the frontend.
+
+All major website sections must pull their content from the database or a properly managed content source.
+
+The public website should display the latest published content automatically after changes are made in the admin dashboard.
+
+Make the admin interface visually consistent with the main website, using black, white and red.
+
+The admin dashboard should be accessible through a separate protected route such as /admin.
+
+Never expose secret API keys or service-role credentials in frontend code.
+
+---
+
+# 14. ANIMATIONS AND INTERACTIONS
+
+Use subtle, high-quality interactions throughout the website.
+
+Include:
+
+1. Smooth scrolling.
+2. Subtle fade-in and slide-up animations as sections enter the viewport.
+3. Elegant page transitions.
+4. Animated text reveals for selected hero headings.
+5. Subtle image zoom on project hover.
+6. Smooth navigation underline animations.
+7. Red hover states for interactive links.
+8. Interactive portfolio filtering.
+9. Image lightbox.
+10. Animated mobile navigation.
+11. Smooth accordion interactions for FAQs.
+12. Subtle cursor interactions where appropriate on desktop.
+
+Animations should feel intentional and premium.
+
+Do not overuse motion or make the website slow.
+
+Respect reduced-motion accessibility preferences.
+
+---
+
+# 15. RESPONSIVENESS AND PERFORMANCE
+
+The website must be fully responsive.
+
+Optimise for:
+- Large desktop screens.
+- Standard desktop screens.
+- Tablets.
+- Mobile devices.
+
+Pay special attention to mobile layouts.
+
+On mobile:
+- Typography should scale appropriately.
+- Project images should remain visually engaging.
+- Navigation should be easy to use.
+- Buttons should be touch-friendly.
+- No horizontal overflow.
+- Forms should be easy to complete.
+- Content should not feel overcrowded.
+
+Performance requirements:
+- Optimised images.
+- Lazy loading where appropriate.
+- Proper image dimensions.
+- Efficient component structure.
+- Minimal unnecessary JavaScript.
+- Fast page loading.
+- SEO-friendly semantic HTML.
+- Accessible colour contrast.
+- Proper keyboard navigation.
+
+---
+
+# 16. SEO AND SOCIAL SHARING
+
+Configure individual SEO titles and descriptions.
+
+Homepage SEO title:
+Akande Olalekan (Lekzy) | Product, Brand & Web Designer.
+
+Homepage meta description:
+"Akande Olalekan is a multidisciplinary designer specialising in brand identity, graphic design, social media design, website development and digital experiences. Based in Nigeria, available worldwide."
+
+Suggested keywords:
+- Akande Olalekan.
+- Lekzy Graphics.
+- Freelance Product Designer.
+- Brand Identity Designer.
+- Graphic Designer in Nigeria.
+- Web Designer in Nigeria.
+- WordPress Website Designer.
+- Social Media Designer.
+- Digital Creative.
+- Remote Graphic Designer.
+
+Include:
+- Open Graph metadata.
+- Social sharing images.
+- Favicon.
+- Sitemap.
+- Robots.txt.
+- Descriptive image alt text.
+- Clean page URLs.
+- Proper heading hierarchy.
+
+---
+
+# 17. TECHNICAL IMPLEMENTATION REQUIREMENTS
+
+Before implementing anything, inspect the available project environment and existing codebase.
+
+If a project already exists, preserve its working structure and dependencies where possible. Do not unnecessarily rebuild or remove functional components.
+
+Use a modern, maintainable development architecture.
+
+Preferred stack:
+- React.
+- TypeScript.
+- Tailwind CSS.
+- Reusable components.
+- React Router or an equivalent routing solution.
+- Supabase for persistent data, authentication and storage where available.
+
+If the environment requires a different stack, use the most compatible approach while maintaining the same functionality.
+
+Create reusable components for:
+- Header.
+- Footer.
+- Navigation.
+- Buttons.
+- Project cards.
+- Service cards.
+- Testimonials.
+- Contact forms.
+- Page headings.
+- Image galleries.
+- Admin dashboard sections.
+
+Use clean, organised and maintainable code.
+
+All links, navigation items, buttons, filters, forms, image galleries and admin actions must work.
+
+Do not leave dead buttons, empty links, fake interactions or decorative elements pretending to be functional.
+
+Do not use Lorem Ipsum or generic placeholder copy. Use the content supplied in this brief.
+
+Where an actual photograph, logo, client testimonial, project image or contact detail is missing, provide a clear editable placeholder in the CMS instead of fabricating information.
+
+---
+
+# 18. FINAL DESIGN EXPECTATION
+
+The final website should feel like a premium independent creative professional's portfolio.
+
+I want visitors to immediately understand that Akande Olalekan is a designer who can think creatively, understand business needs, build strong brands and create functional digital experiences.
+
+The experience should be visually memorable without sacrificing usability.
+
+Prioritise:
+1. A powerful and distinctive homepage.
+2. Excellent typography and layout.
+3. Strong presentation of portfolio projects.
+4. Detailed individual case studies.
+5. Clear professional positioning.
+6. An intuitive navigation experience.
+7. Fully functional contact forms.
+8. A practical and secure CMS.
+9. Consistent use of RED, BLACK and WHITE.
+10. Excellent desktop and mobile responsiveness.
+
+**IMPORTANT EXECUTION INSTRUCTION:**
+
+Do not simply generate a homepage mockup or a static visual demonstration.
+
+Build the complete multi-page website with actual navigation, real page content, reusable components, functional interactions, persistent content management and a working admin dashboard.
+
+Implement the project in stages if necessary, but maintain the same design system and overall architecture throughout.
+
+Start by establishing the design system, website structure, homepage and navigation. Then build the remaining pages, project case studies, CMS and backend functionality.
+
+After implementation, test every page, navigation link, interactive element, form and administrative feature.
+
+The final result should be polished, professional, functional and ready for further content population and deployment.
+
+**THE BRAND IS AKANDE OLALEKAN. THE CREATIVE IDENTITY IS LEKZY. THE BRAND COLOURS ARE RED, BLACK AND WHITE. KEEP THIS IDENTITY CONSISTENT THROUGHOUT THE ENTIRE WEBSITE.**

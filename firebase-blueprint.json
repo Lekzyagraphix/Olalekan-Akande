@@ -1,0 +1,242 @@
+{
+  "entities": {
+    "SiteSettings": {
+      "title": "SiteSettings",
+      "description": "Global CMS settings for Akande Olalekan (Lekzy) portfolio website.",
+      "type": "object",
+      "properties": {
+        "brandName": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "creativeIdentity": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "monogram": { "type": "string", "minLength": 1, "maxLength": 10 },
+        "logoUrl": { "type": "string", "maxLength": 2000 },
+        "primaryColor": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$", "maxLength": 7 },
+        "blackColor": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$", "maxLength": 7 },
+        "whiteColor": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$", "maxLength": 7 },
+        "headingFont": { "type": "string", "minLength": 1, "maxLength": 60 },
+        "bodyFont": { "type": "string", "minLength": 1, "maxLength": 60 },
+        "contactEmail": { "type": "string", "maxLength": 160 },
+        "whatsappNumber": { "type": "string", "maxLength": 32 },
+        "behanceUrl": { "type": "string", "maxLength": 300 },
+        "instagramUrl": { "type": "string", "maxLength": 300 },
+        "pinterestUrl": { "type": "string", "maxLength": 300 },
+        "linkedinUrl": { "type": "string", "maxLength": 300 },
+        "announcementEnabled": { "type": "boolean" },
+        "announcementText": { "type": "string", "maxLength": 240 },
+        "heroLabel": { "type": "string", "maxLength": 120 },
+        "heroHeadline": { "type": "string", "maxLength": 240 },
+        "heroHighlightWords": { "type": "string", "maxLength": 160 },
+        "heroSupportingText": { "type": "string", "maxLength": 2000 },
+        "heroLocationText": { "type": "string", "maxLength": 120 },
+        "heroAvailabilityRemote": { "type": "string", "maxLength": 120 },
+        "heroAvailabilityTypes": { "type": "string", "maxLength": 160 },
+        "footerHeadline": { "type": "string", "maxLength": 160 },
+        "footerDescription": { "type": "string", "maxLength": 600 },
+        "footerCtaTitle": { "type": "string", "maxLength": 120 },
+        "footerCtaSubtitle": { "type": "string", "maxLength": 200 },
+        "footerCopyright": { "type": "string", "maxLength": 160 },
+        "statsItems": { "type": "array", "maxLength": 8 },
+        "budgetRangesNgn": { "type": "array", "maxLength": 10 },
+        "budgetRangesUsd": { "type": "array", "maxLength": 10 },
+        "budgetRangesGbp": { "type": "array", "maxLength": 10 },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["brandName", "creativeIdentity", "monogram", "primaryColor", "updatedAt"]
+    },
+    "ProfileData": {
+      "title": "ProfileData",
+      "description": "Designer biography, portrait, CV, experience, skills, and education.",
+      "type": "object",
+      "properties": {
+        "fullName": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "creativeIdentity": { "type": "string", "maxLength": 100 },
+        "professionalTitle": { "type": "string", "maxLength": 140 },
+        "location": { "type": "string", "maxLength": 140 },
+        "availabilitySummary": { "type": "string", "maxLength": 600 },
+        "portraitUrl": { "type": "string", "maxLength": 2000 },
+        "cvUrl": { "type": "string", "maxLength": 2000 },
+        "cvFileName": { "type": "string", "maxLength": 160 },
+        "aboutHeadline": { "type": "string", "maxLength": 200 },
+        "aboutIntro": { "type": "string", "maxLength": 2000 },
+        "storyHeadline": { "type": "string", "maxLength": 200 },
+        "storyContent": { "type": "string", "maxLength": 4000 },
+        "philosophyHeadline": { "type": "string", "maxLength": 200 },
+        "beyondHeadline": { "type": "string", "maxLength": 200 },
+        "beyondContent": { "type": "string", "maxLength": 2000 },
+        "experiences": { "type": "array", "maxLength": 15 },
+        "skillCategories": { "type": "array", "maxLength": 10 },
+        "education": { "type": "array", "maxLength": 15 },
+        "coreCompetencies": { "type": "array", "maxLength": 24 },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["fullName", "professionalTitle", "location", "updatedAt"]
+    },
+    "Project": {
+      "title": "Project",
+      "description": "Portfolio project and detailed case study.",
+      "type": "object",
+      "properties": {
+        "slug": { "type": "string", "minLength": 1, "maxLength": 120, "pattern": "^[a-z0-9-]+$" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 160 },
+        "filterCategory": {
+          "type": "string",
+          "enum": ["BRANDING", "GRAPHIC DESIGN", "SOCIAL MEDIA", "WEBSITE DESIGN", "UI/UX DESIGN"]
+        },
+        "categoryLabel": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "shortDescription": { "type": "string", "minLength": 1, "maxLength": 600 },
+        "overview": { "type": "string", "maxLength": 2500 },
+        "client": { "type": "string", "maxLength": 160 },
+        "industry": { "type": "string", "maxLength": 160 },
+        "servicesProvided": { "type": "array", "maxLength": 15 },
+        "duration": { "type": "string", "maxLength": 80 },
+        "year": { "type": "string", "maxLength": 20 },
+        "background": { "type": "string", "maxLength": 2500 },
+        "challenge": { "type": "string", "maxLength": 2500 },
+        "creativeApproach": { "type": "string", "maxLength": 2500 },
+        "process": { "type": "string", "maxLength": 2500 },
+        "outcome": { "type": "string", "maxLength": 2500 },
+        "contribution": { "type": "string", "maxLength": 2000 },
+        "coverImageUrl": { "type": "string", "maxLength": 2000 },
+        "galleryImages": { "type": "array", "maxLength": 20 },
+        "liveUrl": { "type": "string", "maxLength": 400 },
+        "featured": { "type": "boolean" },
+        "status": { "type": "string", "enum": ["published", "draft"] },
+        "sortOrder": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["slug", "title", "filterCategory", "categoryLabel", "shortDescription", "featured", "status", "sortOrder", "createdAt", "updatedAt"]
+    },
+    "ServiceItem": {
+      "title": "ServiceItem",
+      "description": "Service offering managed through the CMS.",
+      "type": "object",
+      "properties": {
+        "number": { "type": "string", "minLength": 1, "maxLength": 10 },
+        "title": { "type": "string", "minLength": 1, "maxLength": 140 },
+        "headline": { "type": "string", "maxLength": 200 },
+        "shortDescription": { "type": "string", "maxLength": 600 },
+        "description": { "type": "string", "maxLength": 2000 },
+        "deliverables": { "type": "array", "maxLength": 20 },
+        "idealFor": { "type": "string", "maxLength": 300 },
+        "category": { "type": "string", "maxLength": 80 },
+        "imageUrl": { "type": "string", "maxLength": 2000 },
+        "published": { "type": "boolean" },
+        "sortOrder": { "type": "number" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["number", "title", "shortDescription", "published", "sortOrder", "updatedAt"]
+    },
+    "Testimonial": {
+      "title": "Testimonial",
+      "description": "Client testimonial managed through the CMS.",
+      "type": "object",
+      "properties": {
+        "clientName": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "clientPosition": { "type": "string", "maxLength": 120 },
+        "companyName": { "type": "string", "maxLength": 120 },
+        "quote": { "type": "string", "minLength": 1, "maxLength": 1200 },
+        "clientImageUrl": { "type": "string", "maxLength": 2000 },
+        "published": { "type": "boolean" },
+        "sortOrder": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["clientName", "quote", "published", "sortOrder", "createdAt", "updatedAt"]
+    },
+    "Enquiry": {
+      "title": "Enquiry",
+      "description": "Submitted project enquiry from the public contact form.",
+      "type": "object",
+      "properties": {
+        "fullName": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "email": { "type": "string", "minLength": 5, "maxLength": 180 },
+        "company": { "type": "string", "maxLength": 160 },
+        "serviceRequired": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "budget": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "timeline": { "type": "string", "minLength": 2, "maxLength": 100 },
+        "description": { "type": "string", "minLength": 10, "maxLength": 3000 },
+        "status": { "type": "string", "enum": ["unread", "read", "completed"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["fullName", "email", "serviceRequired", "budget", "timeline", "description", "status", "createdAt", "updatedAt"]
+    },
+    "SeoPageConfig": {
+      "title": "SeoPageConfig",
+      "description": "Page-specific SEO title, meta description, keywords, and social sharing image.",
+      "type": "object",
+      "properties": {
+        "pageKey": { "type": "string", "minLength": 1, "maxLength": 40 },
+        "title": { "type": "string", "minLength": 1, "maxLength": 140 },
+        "description": { "type": "string", "maxLength": 320 },
+        "keywords": { "type": "string", "maxLength": 400 },
+        "ogImageUrl": { "type": "string", "maxLength": 2000 },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["pageKey", "title", "description", "updatedAt"]
+    },
+    "MediaAsset": {
+      "title": "MediaAsset",
+      "description": "Uploaded portfolio, profile, or SEO media asset stored persistently.",
+      "type": "object",
+      "properties": {
+        "fileName": { "type": "string", "minLength": 1, "maxLength": 160 },
+        "mimeType": { "type": "string", "minLength": 3, "maxLength": 80 },
+        "dataUrl": { "type": "string", "minLength": 10, "maxLength": 900000 },
+        "category": { "type": "string", "maxLength": 40 },
+        "uploadedBy": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["fileName", "mimeType", "dataUrl", "uploadedBy", "createdAt"]
+    },
+    "AdminUser": {
+      "title": "AdminUser",
+      "description": "Authorized CMS administrator profile.",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "maxLength": 180 },
+        "role": { "type": "string", "enum": ["admin"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["email", "role", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/settings/{settingId}": {
+      "schema": { "$ref": "#/entities/SiteSettings" },
+      "description": "Global site settings document (e.g. /settings/site)."
+    },
+    "/profile/{profileId}": {
+      "schema": { "$ref": "#/entities/ProfileData" },
+      "description": "Designer profile document (e.g. /profile/main)."
+    },
+    "/projects/{projectId}": {
+      "schema": { "$ref": "#/entities/Project" },
+      "description": "Portfolio projects and case studies."
+    },
+    "/services/{serviceId}": {
+      "schema": { "$ref": "#/entities/ServiceItem" },
+      "description": "Creative and digital services."
+    },
+    "/testimonials/{testimonialId}": {
+      "schema": { "$ref": "#/entities/Testimonial" },
+      "description": "Client testimonials."
+    },
+    "/enquiries/{enquiryId}": {
+      "schema": { "$ref": "#/entities/Enquiry" },
+      "description": "Project inquiry submissions from visitors."
+    },
+    "/seo/{pageKey}": {
+      "schema": { "$ref": "#/entities/SeoPageConfig" },
+      "description": "Page-specific SEO metadata."
+    },
+    "/media/{mediaId}": {
+      "schema": { "$ref": "#/entities/MediaAsset" },
+      "description": "Uploaded CMS images and CV assets."
+    },
+    "/admins/{adminId}": {
+      "schema": { "$ref": "#/entities/AdminUser" },
+      "description": "Authorized administrator records."
+    }
+  }
+}
