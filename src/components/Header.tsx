@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
-import { ArrowUpRight, Menu, MessageCircle, X } from 'lucide-react';
+import { ArrowUpRight, Menu, MessageCircle, Moon, Sun, X } from 'lucide-react';
 import { useCms } from '../context/CmsContext';
+import { useTheme } from '../context/ThemeContext';
 import { CmsImage } from './CmsImage';
 
 const NAV_ITEMS = [
@@ -16,6 +17,7 @@ const NAV_ITEMS = [
 
 export function Header() {
   const { settings, profile, resolveMediaUrl } = useCms();
+  const { isDark, toggleTheme } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
@@ -41,7 +43,7 @@ export function Header() {
   return (
     <>
       {settings.announcementEnabled && settings.announcementText && (
-        <div className="bg-[#111111] text-white border-b border-white/10">
+        <div className="bg-[#111111] dark:bg-[#050505] text-white border-b border-white/10">
           <div className="max-w-7xl mx-auto px-6 md:px-10 py-2 flex items-center justify-center text-center gap-3">
             <Link
               to="/contact"
@@ -53,12 +55,12 @@ export function Header() {
         </div>
       )}
 
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-black/10">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 h-16 md:h-20 flex items-center justify-between gap-8">
+      <header className="sticky top-0 z-40 bg-white/95 dark:bg-[#0D0D0D]/95 backdrop-blur-sm border-b border-black/10 dark:border-white/12 transition-colors duration-200">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 h-16 md:h-20 flex items-center justify-between gap-6">
           {/* Zone 1: Brand Wordmark */}
           <Link
             to="/"
-            className="font-display text-base md:text-lg font-extrabold tracking-tight text-[#111111] whitespace-nowrap shrink-0 flex items-center gap-2.5"
+            className="font-display text-base md:text-lg font-extrabold tracking-tight text-[#111111] dark:text-white whitespace-nowrap shrink-0 flex items-center gap-2.5"
           >
             {logoResolved ? (
               <CmsImage
@@ -78,7 +80,7 @@ export function Header() {
           {/* Zone 2: Clean Single-Line Navigation */}
           <nav
             aria-label="Primary navigation"
-            className="hidden lg:flex items-center gap-7 text-sm font-medium text-[#111111]"
+            className="hidden lg:flex items-center gap-7 text-sm font-medium text-[#111111] dark:text-[#F5F5F5]"
           >
             {NAV_ITEMS.map((item) => (
               <NavLink
@@ -87,7 +89,9 @@ export function Header() {
                 end={item.to === '/'}
                 className={({ isActive }) =>
                   `nav-link-underline whitespace-nowrap shrink-0 transition-colors ${
-                    isActive ? 'text-[#E31B23] font-semibold' : 'text-[#111111] hover:text-[#E31B23]'
+                    isActive
+                      ? 'text-[#E31B23] font-semibold'
+                      : 'text-[#111111] dark:text-[#F5F5F5] hover:text-[#E31B23]'
                   }`
                 }
               >
@@ -98,15 +102,26 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Zone 3: Single Primary Action + Mobile Menu Trigger */}
-          <div className="flex items-center gap-3 shrink-0">
+          {/* Zone 3: Theme Toggle + Primary Action + Mobile Menu Trigger */}
+          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-pressed={isDark}
+              title={isDark ? 'Light Mode' : 'Dark Mode'}
+              className="w-10 h-10 md:w-11 md:h-11 flex items-center justify-center border border-black/15 dark:border-white/20 text-[#111111] dark:text-white hover:border-[#E31B23] hover:text-[#E31B23] dark:hover:border-[#E31B23] dark:hover:text-[#E31B23] transition-colors cursor-pointer shrink-0"
+            >
+              {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </button>
+
             {whatsappUrl ? (
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Let's Talk on WhatsApp (${settings.whatsappNumber})`}
-                className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#111111] transition-colors whitespace-nowrap shrink-0"
+                className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#111111] dark:hover:bg-white dark:hover:text-[#111111] transition-colors whitespace-nowrap shrink-0"
               >
                 <MessageCircle className="w-3.5 h-3.5" />
                 <span>Let&apos;s Talk</span>
@@ -115,7 +130,7 @@ export function Header() {
             ) : (
               <Link
                 to="/contact"
-                className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#111111] transition-colors whitespace-nowrap shrink-0"
+                className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.14em] uppercase hover:bg-[#111111] dark:hover:bg-white dark:hover:text-[#111111] transition-colors whitespace-nowrap shrink-0"
               >
                 <span>Let&apos;s Talk</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -127,7 +142,7 @@ export function Header() {
               onClick={() => setMobileOpen((prev) => !prev)}
               aria-expanded={mobileOpen}
               aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
-              className="lg:hidden w-11 h-11 flex items-center justify-center border border-black/15 text-[#111111] hover:border-[#E31B23] hover:text-[#E31B23] transition-colors cursor-pointer"
+              className="lg:hidden w-10 h-10 flex items-center justify-center border border-black/15 dark:border-white/20 text-[#111111] dark:text-white hover:border-[#E31B23] hover:text-[#E31B23] transition-colors cursor-pointer"
             >
               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -174,6 +189,15 @@ export function Header() {
               </nav>
 
               <div className="pt-8 border-t border-white/10 space-y-4">
+                <button
+                  type="button"
+                  onClick={toggleTheme}
+                  className="w-full py-3.5 px-5 border border-white/20 text-white text-xs font-semibold tracking-[0.14em] uppercase flex items-center justify-between hover:border-[#E31B23] transition-colors cursor-pointer"
+                >
+                  <span>{isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}</span>
+                  {isDark ? <Sun className="w-4 h-4 text-[#E31B23]" /> : <Moon className="w-4 h-4 text-[#E31B23]" />}
+                </button>
+
                 {whatsappUrl ? (
                   <a
                     href={whatsappUrl}

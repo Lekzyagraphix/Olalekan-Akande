@@ -28,12 +28,12 @@ export function ContactPage() {
         }
       />
 
-      <section className="bg-[#F4F4F4] border-b border-black/10">
+      <section className="bg-[#F4F4F4] dark:bg-[#141414] border-b border-black/10 dark:border-white/12 transition-colors duration-200">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Contact Details */}
             <div className="lg:col-span-5 space-y-8">
-              <div className="bg-[#111111] text-white p-8 md:p-10 space-y-8">
+              <div className="bg-[#111111] dark:bg-[#0D0D0D] dark:border dark:border-white/12 text-white p-8 md:p-10 space-y-8">
                 <div>
                   <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#E31B23] mb-2">
                     Contact Details
@@ -141,7 +141,7 @@ export function ContactPage() {
                 <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#E31B23] mb-2">
                   Project Inquiry
                 </p>
-                <h2 className="font-display text-2xl md:text-3xl font-extrabold tracking-tight text-[#111111]">
+                <h2 className="font-display text-2xl md:text-3xl font-extrabold tracking-tight text-[#111111] dark:text-white">
                   Tell me about your project.
                 </h2>
               </div>

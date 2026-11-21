@@ -91,7 +91,7 @@ export function ProjectInquiryForm() {
 
   if (submitted) {
     return (
-      <div className="bg-[#111111] text-white p-8 md:p-12 border border-black/15">
+      <div className="bg-[#111111] dark:bg-[#0D0D0D] text-white p-8 md:p-12 border border-black/15 dark:border-white/15">
         <div className="w-12 h-12 bg-[#E31B23] flex items-center justify-center mb-6">
           <CheckCircle2 className="w-6 h-6 text-white" />
         </div>
@@ -114,11 +114,15 @@ export function ProjectInquiryForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-6 bg-white border border-black/10 p-7 md:p-10">
+    <form
+      onSubmit={handleSubmit}
+      noValidate
+      className="space-y-6 bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-7 md:p-10 transition-colors duration-200"
+    >
       {errorMessage && (
         <div
           role="alert"
-          className="p-4 bg-[#E31B23]/10 border border-[#E31B23] text-sm text-[#111111]"
+          className="p-4 bg-[#E31B23]/10 border border-[#E31B23] text-sm text-[#111111] dark:text-white"
         >
           {errorMessage}
         </div>
@@ -128,7 +132,7 @@ export function ProjectInquiryForm() {
         <div>
           <label
             htmlFor="enquiry-full-name"
-            className="block text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] mb-2"
+            className="block text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] dark:text-white mb-2"
           >
             Full Name *
           </label>
@@ -139,14 +143,14 @@ export function ProjectInquiryForm() {
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
             placeholder="Your full name"
-            className="w-full px-4 py-3 bg-[#F4F4F4] border border-black/10 text-sm text-[#111111] focus:outline-none focus:border-[#E31B23]"
+            className="w-full px-4 py-3 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white placeholder:text-[#777777] dark:placeholder:text-[#888888] focus:outline-none focus:border-[#E31B23]"
           />
         </div>
 
         <div>
           <label
             htmlFor="enquiry-email"
-            className="block text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] mb-2"
+            className="block text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] dark:text-white mb-2"
           >
             Email Address *
           </label>
@@ -157,7 +161,7 @@ export function ProjectInquiryForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@company.com"
-            className="w-full px-4 py-3 bg-[#F4F4F4] border border-black/10 text-sm text-[#111111] focus:outline-none focus:border-[#E31B23]"
+            className="w-full px-4 py-3 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white placeholder:text-[#777777] dark:placeholder:text-[#888888] focus:outline-none focus:border-[#E31B23]"
           />
         </div>
       </div>
@@ -166,7 +170,7 @@ export function ProjectInquiryForm() {
         <div>
           <label
             htmlFor="enquiry-company"
-            className="block text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] mb-2"
+            className="block text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] dark:text-white mb-2"
           >
             Company / Brand
           </label>
@@ -176,14 +180,14 @@ export function ProjectInquiryForm() {
             value={company}
             onChange={(e) => setCompany(e.target.value)}
             placeholder="Brand or organisation name"
-            className="w-full px-4 py-3 bg-[#F4F4F4] border border-black/10 text-sm text-[#111111] focus:outline-none focus:border-[#E31B23]"
+            className="w-full px-4 py-3 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white placeholder:text-[#777777] dark:placeholder:text-[#888888] focus:outline-none focus:border-[#E31B23]"
           />
         </div>
 
         <div>
           <label
             htmlFor="enquiry-service"
-            className="block text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] mb-2"
+            className="block text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] dark:text-white mb-2"
           >
             Service Required *
           </label>
@@ -191,7 +195,7 @@ export function ProjectInquiryForm() {
             id="enquiry-service"
             value={serviceRequired}
             onChange={(e) => setServiceRequired(e.target.value)}
-            className="w-full px-4 py-3 bg-[#F4F4F4] border border-black/10 text-sm text-[#111111] focus:outline-none focus:border-[#E31B23]"
+            className="w-full px-4 py-3 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white focus:outline-none focus:border-[#E31B23]"
           >
             {SERVICE_OPTIONS.map((opt) => (
               <option key={opt} value={opt}>
@@ -207,11 +211,11 @@ export function ProjectInquiryForm() {
           <div className="flex items-center justify-between mb-2">
             <label
               htmlFor="enquiry-budget"
-              className="block text-xs font-semibold tracking-[0.14em] uppercase text-[#111111]"
+              className="block text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] dark:text-white"
             >
               Project Budget *
             </label>
-            <div className="inline-flex border border-black/15">
+            <div className="inline-flex border border-black/15 dark:border-white/20">
               {(['NGN', 'USD', 'GBP'] as Currency[]).map((curr) => (
                 <button
                   key={curr}
@@ -222,8 +226,8 @@ export function ProjectInquiryForm() {
                   }}
                   className={`px-2 py-0.5 text-[11px] font-semibold transition-colors cursor-pointer ${
                     currency === curr
-                      ? 'bg-[#111111] text-white'
-                      : 'bg-white text-[#777777] hover:text-[#111111]'
+                      ? 'bg-[#111111] dark:bg-[#E31B23] text-white'
+                      : 'bg-white dark:bg-[#0D0D0D] text-[#777777] dark:text-[#B3B3B3] hover:text-[#111111] dark:hover:text-white'
                   }`}
                 >
                   {curr}
@@ -235,7 +239,7 @@ export function ProjectInquiryForm() {
             id="enquiry-budget"
             value={activeBudget}
             onChange={(e) => setBudget(e.target.value)}
-            className="w-full px-4 py-3 bg-[#F4F4F4] border border-black/10 text-sm text-[#111111] focus:outline-none focus:border-[#E31B23]"
+            className="w-full px-4 py-3 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white focus:outline-none focus:border-[#E31B23]"
           >
             {budgetOptions.map((range) => (
               <option key={range} value={range}>
@@ -248,7 +252,7 @@ export function ProjectInquiryForm() {
         <div>
           <label
             htmlFor="enquiry-timeline"
-            className="block text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] mb-2"
+            className="block text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] dark:text-white mb-2"
           >
             Project Timeline *
           </label>
@@ -256,7 +260,7 @@ export function ProjectInquiryForm() {
             id="enquiry-timeline"
             value={timeline}
             onChange={(e) => setTimeline(e.target.value)}
-            className="w-full px-4 py-3 bg-[#F4F4F4] border border-black/10 text-sm text-[#111111] focus:outline-none focus:border-[#E31B23]"
+            className="w-full px-4 py-3 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white focus:outline-none focus:border-[#E31B23]"
           >
             {TIMELINE_OPTIONS.map((item) => (
               <option key={item} value={item}>
@@ -270,7 +274,7 @@ export function ProjectInquiryForm() {
       <div>
         <label
           htmlFor="enquiry-description"
-          className="block text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] mb-2"
+          className="block text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] dark:text-white mb-2"
         >
           Project Description *
         </label>
@@ -281,14 +285,14 @@ export function ProjectInquiryForm() {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           placeholder="Tell me about your brand, goals, deliverables, and what you want to achieve..."
-          className="w-full px-4 py-3 bg-[#F4F4F4] border border-black/10 text-sm text-[#111111] focus:outline-none focus:border-[#E31B23] resize-y"
+          className="w-full px-4 py-3 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white placeholder:text-[#777777] dark:placeholder:text-[#888888] focus:outline-none focus:border-[#E31B23] resize-y"
         />
       </div>
 
       <button
         type="submit"
         disabled={submitting}
-        className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.16em] uppercase hover:bg-[#111111] disabled:opacity-60 transition-colors cursor-pointer"
+        className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#E31B23] text-white text-xs font-semibold tracking-[0.16em] uppercase hover:bg-[#111111] dark:hover:bg-white dark:hover:text-[#111111] disabled:opacity-60 transition-colors cursor-pointer"
       >
         {submitting ? (
           <>

@@ -21,7 +21,7 @@ export function ProcessPage() {
       />
 
       {/* Five Process Stages */}
-      <section className="bg-white divide-y divide-black/10 border-b border-black/10">
+      <section className="bg-white dark:bg-[#0D0D0D] divide-y divide-black/10 dark:divide-white/12 border-b border-black/10 dark:border-white/12 transition-colors duration-200">
         {FULL_PROCESS_STAGES.map((stage) => (
           <div key={stage.number} className="max-w-7xl mx-auto px-6 md:px-10 py-14 md:py-18">
             <Reveal>
@@ -32,17 +32,17 @@ export function ProcessPage() {
                   </span>
                 </div>
                 <div className="lg:col-span-5">
-                  <h2 className="font-display text-2xl md:text-3xl font-extrabold tracking-tight text-[#111111]">
+                  <h2 className="font-display text-2xl md:text-3xl font-extrabold tracking-tight text-[#111111] dark:text-white">
                     {stage.title}
                   </h2>
                 </div>
                 <div className="lg:col-span-5 space-y-5">
-                  <p className="text-base text-[#555555] leading-relaxed">{stage.description}</p>
-                  <div className="pt-4 border-t border-black/10">
-                    <p className="text-[11px] font-semibold tracking-[0.16em] uppercase text-[#777777] mb-1">
+                  <p className="text-base text-[#555555] dark:text-[#B3B3B3] leading-relaxed">{stage.description}</p>
+                  <div className="pt-4 border-t border-black/10 dark:border-white/12">
+                    <p className="text-[11px] font-semibold tracking-[0.16em] uppercase text-[#777777] dark:text-[#999999] mb-1">
                       Deliverable
                     </p>
-                    <p className="text-sm font-semibold text-[#111111]">{stage.deliverable}</p>
+                    <p className="text-sm font-semibold text-[#111111] dark:text-white">{stage.deliverable}</p>
                   </div>
                 </div>
               </div>
@@ -52,7 +52,7 @@ export function ProcessPage() {
       </section>
 
       {/* Clarity Section */}
-      <section className="bg-[#111111] text-white">
+      <section className="bg-[#111111] dark:bg-[#080808] text-white transition-colors duration-200">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5">

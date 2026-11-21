@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
 import { CmsProvider } from './context/CmsContext';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { Header } from './components/Header';
@@ -26,7 +27,7 @@ function ScrollToTop() {
 
 function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-[#111111]">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-[#0D0D0D] text-[#111111] dark:text-[#F5F5F5] transition-colors duration-200">
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
@@ -36,9 +37,10 @@ function PublicLayout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <ErrorBoundary>
-      <CmsProvider>
-        <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <ThemeProvider>
+      <ErrorBoundary>
+        <CmsProvider>
+          <BrowserRouter basename={import.meta.env.BASE_URL}>
           <ScrollToTop />
           <Routes>
             <Route
@@ -126,5 +128,6 @@ export default function App() {
         </BrowserRouter>
       </CmsProvider>
     </ErrorBoundary>
+  </ThemeProvider>
   );
 }

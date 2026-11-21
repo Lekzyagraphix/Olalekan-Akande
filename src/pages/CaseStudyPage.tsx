@@ -32,15 +32,15 @@ export function CaseStudyPage() {
         <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#E31B23] mb-4">
           Case Study
         </p>
-        <h1 className="font-display text-3xl md:text-5xl font-extrabold tracking-tight text-[#111111] mb-4">
+        <h1 className="font-display text-3xl md:text-5xl font-extrabold tracking-tight text-[#111111] dark:text-white mb-4">
           Project Not Found
         </h1>
-        <p className="text-base text-[#555555] max-w-lg mx-auto mb-8">
+        <p className="text-base text-[#555555] dark:text-[#B3B3B3] max-w-lg mx-auto mb-8">
           This project may have been moved or is currently unpublished.
         </p>
         <Link
           to="/portfolio"
-          className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#111111] text-white text-xs font-semibold tracking-[0.16em] uppercase hover:bg-[#E31B23] transition-colors"
+          className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#111111] dark:bg-white text-white dark:text-[#111111] text-xs font-semibold tracking-[0.16em] uppercase hover:bg-[#E31B23] hover:text-white transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Portfolio</span>
@@ -73,7 +73,7 @@ export function CaseStudyPage() {
   return (
     <div>
       {/* Case Study Header */}
-      <section className="bg-[#111111] text-white border-b border-white/10">
+      <section className="bg-[#111111] dark:bg-[#080808] text-white border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 md:px-10 pt-12 pb-16 md:pt-16 md:pb-20">
           <Link
             to="/portfolio"
@@ -160,13 +160,13 @@ export function CaseStudyPage() {
       </section>
 
       {/* Primary Cover Visual */}
-      <section className="bg-[#F4F4F4] border-b border-black/10">
+      <section className="bg-[#F4F4F4] dark:bg-[#141414] border-b border-black/10 dark:border-white/12 transition-colors duration-200">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-10 md:py-14">
           {coverResolved ? (
             <button
               type="button"
               onClick={() => setLightboxIndex(0)}
-              className="group relative w-full aspect-[16/9] bg-[#111111] border border-black/10 overflow-hidden block cursor-pointer"
+              className="group relative w-full aspect-[16/9] bg-[#111111] border border-black/10 dark:border-white/12 overflow-hidden block cursor-pointer"
             >
               <CmsImage
                 src={project.coverImageUrl}
@@ -180,7 +180,7 @@ export function CaseStudyPage() {
               </span>
             </button>
           ) : (
-            <div className="bg-[#111111] text-white p-10 md:p-16 border border-black/15 flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div className="bg-[#111111] text-white p-10 md:p-16 border border-black/15 dark:border-white/15 flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div>
                 <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#E31B23] mb-2">
                   Project Visuals
@@ -208,64 +208,64 @@ export function CaseStudyPage() {
       </section>
 
       {/* Case Study Editorial Narrative */}
-      <section className="bg-white border-b border-black/10">
+      <section className="bg-white dark:bg-[#0D0D0D] border-b border-black/10 dark:border-white/12 transition-colors duration-200">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24 space-y-14">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-black/10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-black/10 dark:border-white/12">
             <div className="lg:col-span-4">
               <p className="font-mono-num text-xs font-semibold text-[#E31B23] mb-2">01</p>
-              <h2 className="font-display text-2xl font-bold text-[#111111]">
+              <h2 className="font-display text-2xl font-bold text-[#111111] dark:text-white">
                 Project Background
               </h2>
             </div>
-            <div className="lg:col-span-8 text-base text-[#555555] leading-relaxed">
+            <div className="lg:col-span-8 text-base text-[#555555] dark:text-[#B3B3B3] leading-relaxed">
               <p>{project.background}</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-black/10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-black/10 dark:border-white/12">
             <div className="lg:col-span-4">
               <p className="font-mono-num text-xs font-semibold text-[#E31B23] mb-2">02</p>
-              <h2 className="font-display text-2xl font-bold text-[#111111]">
+              <h2 className="font-display text-2xl font-bold text-[#111111] dark:text-white">
                 The Challenge
               </h2>
             </div>
-            <div className="lg:col-span-8 text-base text-[#555555] leading-relaxed">
+            <div className="lg:col-span-8 text-base text-[#555555] dark:text-[#B3B3B3] leading-relaxed">
               <p>{project.challenge}</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-black/10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-black/10 dark:border-white/12">
             <div className="lg:col-span-4">
               <p className="font-mono-num text-xs font-semibold text-[#E31B23] mb-2">03</p>
-              <h2 className="font-display text-2xl font-bold text-[#111111]">
+              <h2 className="font-display text-2xl font-bold text-[#111111] dark:text-white">
                 Creative Approach
               </h2>
             </div>
-            <div className="lg:col-span-8 text-base text-[#555555] leading-relaxed">
+            <div className="lg:col-span-8 text-base text-[#555555] dark:text-[#B3B3B3] leading-relaxed">
               <p>{project.creativeApproach}</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-black/10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-black/10 dark:border-white/12">
             <div className="lg:col-span-4">
               <p className="font-mono-num text-xs font-semibold text-[#E31B23] mb-2">04</p>
-              <h2 className="font-display text-2xl font-bold text-[#111111]">
+              <h2 className="font-display text-2xl font-bold text-[#111111] dark:text-white">
                 Design &amp; Development Process
               </h2>
             </div>
-            <div className="lg:col-span-8 text-base text-[#555555] leading-relaxed">
+            <div className="lg:col-span-8 text-base text-[#555555] dark:text-[#B3B3B3] leading-relaxed">
               <p>{project.process}</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-black/10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-black/10 dark:border-white/12">
             <div className="lg:col-span-4">
               <p className="font-mono-num text-xs font-semibold text-[#E31B23] mb-2">05</p>
-              <h2 className="font-display text-2xl font-bold text-[#111111]">
+              <h2 className="font-display text-2xl font-bold text-[#111111] dark:text-white">
                 Final Outcome
               </h2>
             </div>
-            <div className="lg:col-span-8 text-base text-[#555555] leading-relaxed">
+            <div className="lg:col-span-8 text-base text-[#555555] dark:text-[#B3B3B3] leading-relaxed">
               <p>{project.outcome}</p>
             </div>
           </div>
@@ -273,19 +273,19 @@ export function CaseStudyPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div className="lg:col-span-4">
               <p className="font-mono-num text-xs font-semibold text-[#E31B23] mb-2">06</p>
-              <h2 className="font-display text-2xl font-bold text-[#111111]">
+              <h2 className="font-display text-2xl font-bold text-[#111111] dark:text-white">
                 My Specific Contribution
               </h2>
             </div>
             <div className="lg:col-span-8">
-              <p className="text-base text-[#111111] font-medium leading-relaxed mb-6">
+              <p className="text-base text-[#111111] dark:text-white font-medium leading-relaxed mb-6">
                 {project.contribution}
               </p>
               {project.servicesProvided.length > 0 && (
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-[#777777]">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-[#777777] dark:text-[#9A9A9A]">
                   {project.servicesProvided.map((svc, idx) => (
                     <React.Fragment key={svc}>
-                      <span className="text-[#111111] font-medium">{svc}</span>
+                      <span className="text-[#111111] dark:text-[#EAEAEA] font-medium">{svc}</span>
                       {idx < project.servicesProvided.length - 1 && (
                         <span className="text-[#E31B23]" aria-hidden="true">
                           /
@@ -302,12 +302,12 @@ export function CaseStudyPage() {
 
       {/* Project Gallery (varied editorial grid + lightbox) */}
       {project.galleryImages.length > 0 && (
-        <section className="bg-[#F4F4F4] border-b border-black/10">
+        <section className="bg-[#F4F4F4] dark:bg-[#141414] border-b border-black/10 dark:border-white/12 transition-colors duration-200">
           <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#E31B23] mb-3">
               Project Gallery
             </p>
-            <h2 className="font-display text-2xl md:text-3xl font-extrabold tracking-tight text-[#111111] mb-10">
+            <h2 className="font-display text-2xl md:text-3xl font-extrabold tracking-tight text-[#111111] dark:text-white mb-10">
               Visual Previews &amp; Deliverables
             </h2>
 
@@ -325,7 +325,7 @@ export function CaseStudyPage() {
                     key={item.id || idx}
                     type="button"
                     onClick={() => setLightboxIndex(slideIdx)}
-                    className={`${colSpan} group relative bg-[#111111] border border-black/10 overflow-hidden block text-left cursor-pointer`}
+                    className={`${colSpan} group relative bg-[#111111] border border-black/10 dark:border-white/12 overflow-hidden block text-left cursor-pointer`}
                   >
                     <CmsImage
                       src={item.url}
@@ -347,20 +347,20 @@ export function CaseStudyPage() {
 
       {/* Related Projects */}
       {relatedProjects.length > 0 && (
-        <section className="bg-white border-b border-black/10">
+        <section className="bg-white dark:bg-[#0D0D0D] border-b border-black/10 dark:border-white/12 transition-colors duration-200">
           <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24">
             <div className="flex items-end justify-between gap-4 mb-10">
               <div>
                 <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#E31B23] mb-2">
                   Continue Exploring
                 </p>
-                <h2 className="font-display text-2xl md:text-3xl font-extrabold tracking-tight text-[#111111]">
+                <h2 className="font-display text-2xl md:text-3xl font-extrabold tracking-tight text-[#111111] dark:text-white">
                   Related Projects
                 </h2>
               </div>
               <Link
                 to="/portfolio"
-                className="text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] hover:text-[#E31B23] transition-colors"
+                className="text-xs font-semibold tracking-[0.14em] uppercase text-[#111111] dark:text-white hover:text-[#E31B23] transition-colors"
               >
                 All Projects
               </Link>
@@ -375,7 +375,7 @@ export function CaseStudyPage() {
       )}
 
       {/* Contact CTA */}
-      <section className="bg-[#111111] text-white">
+      <section className="bg-[#111111] dark:bg-[#080808] text-white">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
           <div>
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#E31B23] mb-2">

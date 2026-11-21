@@ -6,7 +6,7 @@ export function FaqAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="divide-y divide-black/10 border-t border-b border-black/10">
+    <div className="divide-y divide-black/10 dark:divide-white/12 border-t border-b border-black/10 dark:border-white/12">
       {FAQS.map((item, idx) => {
         const isOpen = openIndex === idx;
         return (
@@ -21,16 +21,16 @@ export function FaqAccordion() {
                 <span className="font-mono-num text-xs font-semibold text-[#E31B23]">
                   {String(idx + 1).padStart(2, '0')}
                 </span>
-                <span className="font-display text-base md:text-lg font-semibold text-[#111111] group-hover:text-[#E31B23] transition-colors">
+                <span className="font-display text-base md:text-lg font-semibold text-[#111111] dark:text-[#F5F5F5] group-hover:text-[#E31B23] transition-colors">
                   {item.question}
                 </span>
               </div>
-              <span className="w-9 h-9 shrink-0 flex items-center justify-center border border-black/15 text-[#111111] group-hover:border-[#E31B23] group-hover:text-[#E31B23] transition-colors">
+              <span className="w-9 h-9 shrink-0 flex items-center justify-center border border-black/15 dark:border-white/20 text-[#111111] dark:text-white group-hover:border-[#E31B23] group-hover:text-[#E31B23] transition-colors">
                 {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
               </span>
             </button>
             {isOpen && (
-              <div className="pt-4 pl-8 md:pl-10 pr-12 text-sm md:text-base text-[#555555] leading-relaxed">
+              <div className="pt-4 pl-8 md:pl-10 pr-12 text-sm md:text-base text-[#555555] dark:text-[#B3B3B3] leading-relaxed">
                 {item.answer}
               </div>
             )}

@@ -68,11 +68,11 @@ export function AdminSeoTab({ onNotify }: AdminSeoTabProps) {
 
   return (
     <div className="space-y-8">
-      <div className="pb-6 border-b border-black/10">
-        <h2 className="font-display text-2xl font-extrabold text-[#111111]">
+      <div className="pb-6 border-b border-black/10 dark:border-white/12">
+        <h2 className="font-display text-2xl font-extrabold text-[#111111] dark:text-white">
           SEO &amp; Social Sharing Management
         </h2>
-        <p className="text-sm text-[#777777] mt-1">
+        <p className="text-sm text-[#777777] dark:text-[#999999] mt-1">
           Configure page titles, meta descriptions, keywords, and social sharing images per route.
         </p>
       </div>
@@ -86,7 +86,7 @@ export function AdminSeoTab({ onNotify }: AdminSeoTabProps) {
             className={`px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] cursor-pointer ${
               selectedKey === key
                 ? 'bg-[#E31B23] text-white'
-                : 'bg-white border border-black/10 text-[#111111] hover:border-[#111111]'
+                : 'bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 text-[#111111] dark:text-white hover:border-[#111111] dark:hover:border-white'
             }`}
           >
             {PAGE_LABELS[key]}
@@ -94,9 +94,9 @@ export function AdminSeoTab({ onNotify }: AdminSeoTabProps) {
         ))}
       </div>
 
-      <form onSubmit={handleSave} className="bg-white border border-black/10 p-6 md:p-8 space-y-6">
+      <form onSubmit={handleSave} className="bg-white dark:bg-[#171717] border border-black/10 dark:border-white/12 p-6 md:p-8 space-y-6">
         <div>
-          <label className="block text-xs font-semibold uppercase tracking-[0.12em] mb-2">
+          <label className="block text-xs font-semibold uppercase tracking-[0.12em] text-[#111111] dark:text-white mb-2">
             Page Title *
           </label>
           <input
@@ -104,31 +104,31 @@ export function AdminSeoTab({ onNotify }: AdminSeoTabProps) {
             required
             value={draft.title}
             onChange={(e) => setDraft({ ...draft, title: e.target.value })}
-            className="w-full px-3.5 py-2.5 bg-[#F4F4F4] border border-black/10 text-sm"
+            className="w-full px-3.5 py-2.5 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white focus:outline-none focus:border-[#E31B23]"
           />
         </div>
 
         <div>
-          <label className="block text-xs font-semibold uppercase tracking-[0.12em] mb-2">
+          <label className="block text-xs font-semibold uppercase tracking-[0.12em] text-[#111111] dark:text-white mb-2">
             Meta Description
           </label>
           <textarea
             rows={3}
             value={draft.description}
             onChange={(e) => setDraft({ ...draft, description: e.target.value })}
-            className="w-full px-3.5 py-2.5 bg-[#F4F4F4] border border-black/10 text-sm"
+            className="w-full px-3.5 py-2.5 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white focus:outline-none focus:border-[#E31B23]"
           />
         </div>
 
         <div>
-          <label className="block text-xs font-semibold uppercase tracking-[0.12em] mb-2">
+          <label className="block text-xs font-semibold uppercase tracking-[0.12em] text-[#111111] dark:text-white mb-2">
             Keywords (comma separated)
           </label>
           <input
             type="text"
             value={draft.keywords}
             onChange={(e) => setDraft({ ...draft, keywords: e.target.value })}
-            className="w-full px-3.5 py-2.5 bg-[#F4F4F4] border border-black/10 text-sm"
+            className="w-full px-3.5 py-2.5 bg-[#F4F4F4] dark:bg-[#0D0D0D] border border-black/10 dark:border-white/15 text-sm text-[#111111] dark:text-white focus:outline-none focus:border-[#E31B23]"
           />
         </div>
 
@@ -137,10 +137,10 @@ export function AdminSeoTab({ onNotify }: AdminSeoTabProps) {
             <CmsImage
               src={draft.ogImageUrl}
               alt="OpenGraph share preview"
-              className="w-32 h-20 object-cover border border-black/10"
+              className="w-32 h-20 object-cover border border-black/10 dark:border-white/15"
             />
           )}
-          <label className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#111111] text-white text-xs font-semibold uppercase hover:bg-[#E31B23] cursor-pointer">
+          <label className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#111111] dark:bg-white text-white dark:text-[#111111] text-xs font-semibold uppercase hover:bg-[#E31B23] dark:hover:bg-[#E31B23] dark:hover:text-white cursor-pointer">
             <Upload className="w-3.5 h-3.5" />
             <span>{uploading ? 'Uploading...' : 'Upload Social Sharing Image'}</span>
             <input type="file" accept="image/*" onChange={handleOgUpload} className="hidden" />
@@ -159,7 +159,7 @@ export function AdminSeoTab({ onNotify }: AdminSeoTabProps) {
         <button
           type="submit"
           disabled={saving}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-[#E31B23] text-white text-xs font-semibold uppercase tracking-[0.14em] hover:bg-[#111111] cursor-pointer"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#E31B23] text-white text-xs font-semibold uppercase tracking-[0.14em] hover:bg-[#111111] dark:hover:bg-white dark:hover:text-[#111111] cursor-pointer"
         >
           {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
           <span>Save SEO Settings</span>
