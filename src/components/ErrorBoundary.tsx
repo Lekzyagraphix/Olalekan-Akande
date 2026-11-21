@@ -1,5 +1,4 @@
 import React, { Component, type ReactNode } from 'react';
-import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
@@ -29,6 +28,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
   public render(): ReactNode {
     if (this.state.hasError) {
+      const homeHref = import.meta.env.BASE_URL || '/';
       return (
         <div className="min-h-screen bg-[#111111] text-white flex items-center justify-center px-6 py-16">
           <div className="max-w-xl w-full border border-white/15 p-8 md:p-12 bg-[#1A1A1A]">
@@ -50,13 +50,12 @@ export class ErrorBoundary extends Component<Props, State> {
               >
                 Reload Page
               </button>
-              <Link
-                to="/"
-                onClick={() => this.setState({ hasError: false, errorMessage: '' })}
+              <a
+                href={homeHref}
                 className="px-6 py-3 border border-white/30 text-white text-xs font-semibold tracking-[0.14em] uppercase hover:border-white transition-colors"
               >
                 Back to Homepage
-              </Link>
+              </a>
             </div>
           </div>
         </div>

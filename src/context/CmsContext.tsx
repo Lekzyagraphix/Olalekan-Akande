@@ -498,6 +498,11 @@ export function CmsProvider({ children }: { children: React.ReactNode }) {
         const id = url.slice('media://'.length);
         return mediaMap[id]?.dataUrl || '';
       }
+      if (url.startsWith('/assets/')) {
+        const base = import.meta.env.BASE_URL || '/';
+        const normalizedBase = base.endsWith('/') ? base : `${base}/`;
+        return `${normalizedBase}${url.slice(1)}`;
+      }
       return url;
     },
     [mediaMap]
